@@ -84,7 +84,7 @@ export default function Home() {
             {/* Texto de introdução */}
             <p className="font-inconsolata mb-2 text-base" style={{ color: '#C0C4CE' }}>
               {t.hero.greeting}{" "}
-              <span className="font-semibold" style={{ color: '#E3646E' }}>{NAME}</span> {t.hero.role}
+              <span className="font-semibold" style={{ color: '#3996DB' }}>{NAME}</span> {t.hero.role}
             </p>
 
             {/* Título principal */}
@@ -123,7 +123,7 @@ export default function Home() {
           <Container>
             {/* Cabeçalho */}
             <div className="mb-12 text-center">
-              <p className="font-inconsolata mb-2 text-sm uppercase tracking-widest" style={{ color: '#E3646E' }}>
+              <p className="font-inconsolata mb-2 text-sm uppercase tracking-widest" style={{ color: '#3996DB' }}>
                 {t.work.label}
               </p>
               <h2 className="font-asap text-2xl font-bold sm:text-3xl" style={{ color: '#E2E4E9' }}>
@@ -152,7 +152,7 @@ export default function Home() {
           <Container>
             {/* Cabeçalho */}
             <div className="mb-12 text-center">
-              <p className="font-inconsolata mb-2 text-sm uppercase tracking-widest" style={{ color: '#E3646E' }}>
+              <p className="font-inconsolata mb-2 text-sm uppercase tracking-widest" style={{ color: '#3996DB' }}>
                 {t.services.label}
               </p>
               <h2 className="font-asap text-2xl font-bold sm:text-3xl" style={{ color: '#E2E4E9' }}>
@@ -192,7 +192,7 @@ export default function Home() {
           <Container className="relative z-10 flex flex-col items-center text-center">
             {/* Cabeçalho */}
             <div className="mb-10">
-              <p className="font-inconsolata mb-2 text-sm uppercase tracking-widest" style={{ color: '#E3646E' }}>
+              <p className="font-inconsolata mb-2 text-sm uppercase tracking-widest" style={{ color: '#3996DB' }}>
                 {t.contact.label}
               </p>
               <h2 className="font-asap mb-4 text-2xl font-bold sm:text-3xl" style={{ color: '#E2E4E9' }}>

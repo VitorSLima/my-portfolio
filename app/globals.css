@@ -15,7 +15,7 @@
   --color-base-content: #E2E4E9;
 
   /* Cores principais */
-  --color-primary: #E3646E;
+  --color-primary: #3996DB;
   --color-primary-content: #ffffff;
   
   --color-secondary: #BB72E9;
@@ -37,7 +37,7 @@
   --color-warning: #EABD5F;
   --color-warning-content: #000000;
   
-  --color-error: #E3646E;
+  --color-error: #E74C3C;
   --color-error-content: #ffffff;
 
   /* Bordas */
@@ -110,7 +110,7 @@ body {
 }
 
 .text-primary {
-  color: #E3646E !important;
+  color: #3996DB !important;
 }
 
 .text-secondary {

@@ -55,9 +55,10 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="pt-BR"
+      lang="en"
       data-theme="portfolio"
       className={`${asap.variable} ${inconsolata.variable} ${mavenPro.variable}`}
+      suppressHydrationWarning
     >
       <body className="antialiased" style={{ backgroundColor: '#0D0E11', color: '#E2E4E9' }}>
         <LanguageProvider>
