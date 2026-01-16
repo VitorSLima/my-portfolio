@@ -46,14 +46,14 @@ export const techs: TechItem[] = [
 
 // ==========================================
 // PROJETOS
-// Coloque suas imagens em /public/projects/
+// As imagens estão em /public/projects/
 // ==========================================
 export const projects: ProjectItem[] = [
   {
-    title: "Lorem ipsum",
+    title: "Barber Shop",
     description:
-      "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
-    image: "/projects/proj-1.png",
+      "Um sistema de agendamento e gestão de barbearia com interface intuitiva e foco em usabilidade, permitindo cadastrar serviços, horários e clientes de forma prática e eficiente.",
+    image: "/projects/barber-shop.png",
   },
   {
     title: "lorem ipsum",

@@ -50,9 +50,9 @@ export const translations = {
     // Projects
     projects: [
       {
-        title: "lorem ipsum",
+        title: "Barber Shop",
         description:
-          "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+          "Um sistema de agendamento e gestão de barbearia com interface intuitiva e foco em usabilidade, permitindo cadastrar serviços, horários e clientes de forma prática e eficiente.",
       },
       {
         title: "lorem ipsum",
@@ -128,9 +128,9 @@ export const translations = {
     // Projects
     projects: [
       {
-        title: "lorem ipsum",
+        title: "Barber Shop",
         description:
-          "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+          "A scheduling and management system for barbershops with an intuitive interface focused on usability, allowing easy registration of services, schedules, and clients.",
       },
       {
         title: "lorem ipsum",
