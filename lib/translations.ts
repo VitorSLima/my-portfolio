@@ -154,6 +154,40 @@ export const translations = {
       },
     ],
   },
-} as const;
+};
 
-export type Translations = typeof translations.pt;
+export type Translations = {
+  nav: {
+    home: string;
+    work: string;
+    services: string;
+    contact: string;
+  };
+  hero: {
+    greeting: string;
+    role: string;
+    title: string;
+    description: string;
+  };
+  work: {
+    label: string;
+    title: string;
+  };
+  services: {
+    label: string;
+    title: string;
+    items: Array<{
+      title: string;
+      description: string;
+    }>;
+  };
+  contact: {
+    label: string;
+    title: string;
+    description: string;
+  };
+  projects: Array<{
+    title: string;
+    description: string;
+  }>;
+};
