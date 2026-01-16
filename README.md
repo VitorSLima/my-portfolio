@@ -78,7 +78,7 @@ O tema customizado `portfolio` esta configurado em `tailwind.config.ts` e ativad
 
 Cores do tema:
 
-- Primarias: `#E3646E`, `#BB72E9`, `#3996DB`, `#82BC4F`, `#EABD5F`
+- Primarias: `#3996DB` (azul), `#82BC4F`, `#EABD5F`
 - Base: `#E2E4E9`, `#C0C4CE`, `#878EA1`, `#292C34`, `#16181D`, `#0D0E11`
 
 Para alterar, edite o objeto `portfolio` em `tailwind.config.ts`.
