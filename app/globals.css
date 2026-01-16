@@ -1,26 +1,191 @@
 @import "tailwindcss";
+@import "daisyui/daisyui.css";
+@import "daisyui/themes.css";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* ==========================================
+   TEMA ESCURO "PORTFOLIO" - Cores do Style Guide
+   ========================================== */
+
+:root,
+[data-theme="portfolio"] {
+  /* Background escuro */
+  --color-base-100: #16181D;
+  --color-base-200: #0D0E11;
+  --color-base-300: #292C34;
+  --color-base-content: #E2E4E9;
+
+  /* Cores principais */
+  --color-primary: #E3646E;
+  --color-primary-content: #ffffff;
+  
+  --color-secondary: #BB72E9;
+  --color-secondary-content: #ffffff;
+  
+  --color-accent: #3996DB;
+  --color-accent-content: #ffffff;
+  
+  --color-neutral: #292C34;
+  --color-neutral-content: #E2E4E9;
+
+  /* Feedback */
+  --color-info: #3996DB;
+  --color-info-content: #ffffff;
+  
+  --color-success: #82BC4F;
+  --color-success-content: #ffffff;
+  
+  --color-warning: #EABD5F;
+  --color-warning-content: #000000;
+  
+  --color-error: #E3646E;
+  --color-error-content: #ffffff;
+
+  /* Bordas */
+  --radius-selector: 0.5rem;
+  --radius-field: 0.5rem;
+  --radius-box: 1rem;
+  --border: 1px;
+
+  color-scheme: dark;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+/* ==========================================
+   ESTILOS GLOBAIS
+   ========================================== */
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
+  background-color: #0D0E11;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-maven), sans-serif;
+  background-color: #0D0E11;
+  color: #E2E4E9;
+}
+
+/* Classes de fonte - usam as variáveis injetadas por next/font/google */
+.font-asap {
+  font-family: var(--font-asap), sans-serif;
+}
+
+.font-inconsolata {
+  font-family: var(--font-inconsolata), monospace;
+}
+
+.font-maven {
+  font-family: var(--font-maven), sans-serif;
+}
+
+/* ==========================================
+   OVERRIDE DE CORES DAISYUI
+   ========================================== */
+
+.bg-base-100 {
+  background-color: #16181D !important;
+}
+
+.bg-base-200 {
+  background-color: #0D0E11 !important;
+}
+
+.bg-base-300 {
+  background-color: #292C34 !important;
+}
+
+.text-base-content {
+  color: #E2E4E9 !important;
+}
+
+.text-base-content\/70 {
+  color: rgba(226, 228, 233, 0.7) !important;
+}
+
+.text-base-content\/60 {
+  color: rgba(226, 228, 233, 0.6) !important;
+}
+
+.text-base-content\/50 {
+  color: rgba(226, 228, 233, 0.5) !important;
+}
+
+.text-primary {
+  color: #E3646E !important;
+}
+
+.text-secondary {
+  color: #BB72E9 !important;
+}
+
+.text-accent {
+  color: #3996DB !important;
+}
+
+.border-base-300 {
+  border-color: #292C34 !important;
+}
+
+.border-base-300\/40 {
+  border-color: rgba(41, 44, 52, 0.4) !important;
+}
+
+/* Cards */
+.card {
+  background-color: #16181D;
+  border-color: #292C34;
+}
+
+/* Buttons */
+.btn-ghost:hover {
+  background-color: rgba(41, 44, 52, 0.5);
+}
+
+.btn-outline {
+  border-color: #292C34;
+}
+
+/* Badge */
+.badge-outline {
+  border-color: #292C34;
+  background-color: rgba(22, 24, 29, 0.7);
+}
+
+/* ==========================================
+   UTILITÁRIOS CUSTOMIZADOS
+   ========================================== */
+
+/* Efeito de glow */
+.glow-subtle {
+  box-shadow: 0 0 20px rgba(57, 150, 219, 0.1);
+}
+
+.glow-primary {
+  box-shadow: 0 0 30px rgba(227, 100, 110, 0.2);
+}
+
+.glow-secondary {
+  box-shadow: 0 0 30px rgba(187, 114, 233, 0.2);
+}
+
+/* Overlay escuro */
+.overlay-dark {
+  background: linear-gradient(
+    to bottom,
+    rgba(13, 14, 17, 0.7) 0%,
+    rgba(13, 14, 17, 0.9) 100%
+  );
+}
+
+/* Animação de bounce */
+@keyframes bounce-slow {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+}
+
+.animate-bounce-slow {
+  animation: bounce-slow 2s ease-in-out infinite;
 }
