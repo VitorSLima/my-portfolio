@@ -1,84 +1,107 @@
-# Portfolio Next.js
+# Vitor Lima | Fullstack Developer Portfolio
 
-Portfolio single-page em Next.js (App Router) com TailwindCSS + DaisyUI, seguindo o style guide dark e moderno.
+A modern, responsive portfolio website built to showcase my skills and projects as a Fullstack Developer seeking international opportunities.
 
-## Stack
+## About
 
-- Next.js + TypeScript
-- TailwindCSS + DaisyUI
-- Lucide Icons
+This portfolio serves as my professional showcase, highlighting personal projects and technical expertise. Built with modern technologies and best practices, it demonstrates my capabilities in creating clean, performant, and user-friendly web applications.
 
-## Estrutura
+## Tech Stack
 
-```
-app/
-  layout.tsx
-  page.tsx
-  globals.css
-components/
-  Container.tsx
-  Section.tsx
-  TechChip.tsx
-  ProjectCard.tsx
-  ServiceCard.tsx
-  SocialButton.tsx
-  Header.tsx
-lib/
-  data.ts
-public/
-  background-intro.png
-  background-contacts.png
-  projects/
-    proj-1.png
-    proj-2.png
-    proj-3.png
-    proj-4.png
-    proj-5.png
-    proj-6.png
-```
+- **Framework:** Next.js 15 (App Router)
+- **Language:** TypeScript
+- **Styling:** TailwindCSS 4 + DaisyUI 5
+- **Icons:** Lucide React
+- **Fonts:** Google Fonts (Asap, Inconsolata, Maven Pro)
 
-## Como rodar
+## Features
+
+- Responsive design optimized for all devices
+- Dark theme with modern UI/UX
+- Bilingual support (English/Portuguese) with language switcher
+- Smooth scroll navigation
+- Optimized images with Next.js Image component
+- Clean component architecture
+
+## Sections
+
+- **Home:** Introduction and tech stack
+- **Work:** Featured projects showcase
+- **Services:** Professional services offered
+- **Contact:** Social links and contact information
+
+## Getting Started
 
 ```bash
+# Install dependencies
 npm install
+
+# Run development server
 npm run dev
+
+# Build for production
+npm run build
 ```
 
-## Como personalizar
+Open [http://localhost:3000](http://localhost:3000) to view the portfolio.
 
-### 1) Nome, textos e seções
-Edite os textos diretamente em `app/page.tsx`. O nome principal esta na constante `NAME` no topo do arquivo.
+## Contact
 
-### 2) Tecnologias (chips)
-Edite o array `techs` em `lib/data.ts`.
+- **LinkedIn:** [vitors-lima](https://www.linkedin.com/in/vitors-lima/)
+- **GitHub:** [VitorSLima](https://github.com/VitorSLima)
+- **Email:** dev.vitorlima@gmail.com
 
-### 3) Projetos
-Edite o array `projects` em `lib/data.ts`.
+---
 
-- Thumbnails: coloque em `public/projects/` e ajuste o campo `image`
-- Paths sugeridos: `/projects/proj-1.png`, `/projects/proj-2.png`, etc.
+# Vitor Lima | Portfólio Desenvolvedor Fullstack
 
-### 4) Serviços
-Edite o array `services` em `lib/data.ts`.
+Um site de portfólio moderno e responsivo construído para exibir minhas habilidades e projetos como Desenvolvedor Fullstack buscando oportunidades internacionais.
 
-### 5) Links sociais
-Edite o array `socials` em `lib/data.ts`.
+## Sobre
 
-### 6) Imagens de background
-As imagens usadas pelas seções Hero e Contato estao em `public/`:
+Este portfólio serve como minha vitrine profissional, destacando projetos pessoais e expertise técnica. Construído com tecnologias modernas e boas práticas, demonstra minhas capacidades em criar aplicações web limpas, performáticas e amigáveis ao usuário.
 
-- Hero: `public/background-intro.png`
-- Contato: `public/background-contacts.png`
+## Stack Tecnológica
 
-Para trocar, substitua as imagens mantendo o mesmo nome, ou altere o src em `app/page.tsx`.
+- **Framework:** Next.js 15 (App Router)
+- **Linguagem:** TypeScript
+- **Estilização:** TailwindCSS 4 + DaisyUI 5
+- **Ícones:** Lucide React
+- **Fontes:** Google Fonts (Asap, Inconsolata, Maven Pro)
 
-## Tema DaisyUI
+## Funcionalidades
 
-O tema customizado `portfolio` esta configurado em `tailwind.config.ts` e ativado por padrao em `app/layout.tsx` via `data-theme="portfolio"`.
+- Design responsivo otimizado para todos os dispositivos
+- Tema escuro com UI/UX moderna
+- Suporte bilíngue (Inglês/Português) com seletor de idioma
+- Navegação com scroll suave
+- Imagens otimizadas com componente Next.js Image
+- Arquitetura de componentes limpa
 
-Cores do tema:
+## Seções
 
-- Primarias: `#3996DB` (azul), `#82BC4F`, `#EABD5F`
-- Base: `#E2E4E9`, `#C0C4CE`, `#878EA1`, `#292C34`, `#16181D`, `#0D0E11`
+- **Home:** Introdução e stack tecnológica
+- **Trabalho:** Vitrine de projetos em destaque
+- **Serviços:** Serviços profissionais oferecidos
+- **Contato:** Links sociais e informações de contato
 
-Para alterar, edite o objeto `portfolio` em `tailwind.config.ts`.
+## Como Executar
+
+```bash
+# Instalar dependências
+npm install
+
+# Executar servidor de desenvolvimento
+npm run dev
+
+# Build para produção
+npm run build
+```
+
+Abra [http://localhost:3000](http://localhost:3000) para visualizar o portfólio.
+
+## Contato
+
+- **LinkedIn:** [vitors-lima](https://www.linkedin.com/in/vitors-lima/)
+- **GitHub:** [VitorSLima](https://github.com/VitorSLima)
+- **Email:** dev.vitorlima@gmail.com
