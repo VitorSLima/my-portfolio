@@ -1,36 +1,84 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portfolio Next.js
 
-## Getting Started
+Portfolio single-page em Next.js (App Router) com TailwindCSS + DaisyUI, seguindo o style guide dark e moderno.
 
-First, run the development server:
+## Stack
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- Next.js + TypeScript
+- TailwindCSS + DaisyUI
+- Lucide Icons
+
+## Estrutura
+
+```
+app/
+  layout.tsx
+  page.tsx
+  globals.css
+components/
+  Container.tsx
+  Section.tsx
+  TechChip.tsx
+  ProjectCard.tsx
+  ServiceCard.tsx
+  SocialButton.tsx
+  Header.tsx
+lib/
+  data.ts
+public/
+  background-intro.png
+  background-contacts.png
+  projects/
+    proj-1.png
+    proj-2.png
+    proj-3.png
+    proj-4.png
+    proj-5.png
+    proj-6.png
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Como rodar
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm install
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Como personalizar
 
-## Learn More
+### 1) Nome, textos e seções
+Edite os textos diretamente em `app/page.tsx`. O nome principal esta na constante `NAME` no topo do arquivo.
 
-To learn more about Next.js, take a look at the following resources:
+### 2) Tecnologias (chips)
+Edite o array `techs` em `lib/data.ts`.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 3) Projetos
+Edite o array `projects` em `lib/data.ts`.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Thumbnails: coloque em `public/projects/` e ajuste o campo `image`
+- Paths sugeridos: `/projects/proj-1.png`, `/projects/proj-2.png`, etc.
 
-## Deploy on Vercel
+### 4) Serviços
+Edite o array `services` em `lib/data.ts`.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### 5) Links sociais
+Edite o array `socials` em `lib/data.ts`.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### 6) Imagens de background
+As imagens usadas pelas seções Hero e Contato estao em `public/`:
+
+- Hero: `public/background-intro.png`
+- Contato: `public/background-contacts.png`
+
+Para trocar, substitua as imagens mantendo o mesmo nome, ou altere o src em `app/page.tsx`.
+
+## Tema DaisyUI
+
+O tema customizado `portfolio` esta configurado em `tailwind.config.ts` e ativado por padrao em `app/layout.tsx` via `data-theme="portfolio"`.
+
+Cores do tema:
+
+- Primarias: `#E3646E`, `#BB72E9`, `#3996DB`, `#82BC4F`, `#EABD5F`
+- Base: `#E2E4E9`, `#C0C4CE`, `#878EA1`, `#292C34`, `#16181D`, `#0D0E11`
+
+Para alterar, edite o objeto `portfolio` em `tailwind.config.ts`.
