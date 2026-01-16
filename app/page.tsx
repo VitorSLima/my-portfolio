@@ -21,7 +21,7 @@ const NAME = "Vitor dos Santos Lima";
 
 // Imagens dos projetos
 const projectImages = [
-  "/projects/proj-1.png",
+  "/projects/barber-shop.png",
   "/projects/proj-2.png",
   "/projects/proj-3.png",
   "/projects/proj-4.png",
