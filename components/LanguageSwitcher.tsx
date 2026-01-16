@@ -14,7 +14,7 @@ export default function LanguageSwitcher() {
             ? "bg-primary text-white" 
             : "text-gray-400 hover:text-white"
         }`}
-        style={locale === "pt" ? { backgroundColor: '#E3646E' } : {}}
+        style={locale === "pt" ? { backgroundColor: '#3996DB' } : {}}
       >
         PT
       </button>
@@ -25,7 +25,7 @@ export default function LanguageSwitcher() {
             ? "bg-primary text-white" 
             : "text-gray-400 hover:text-white"
         }`}
-        style={locale === "en" ? { backgroundColor: '#E3646E' } : {}}
+        style={locale === "en" ? { backgroundColor: '#3996DB' } : {}}
       >
         EN
       </button>

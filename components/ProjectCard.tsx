@@ -21,8 +21,8 @@ export default function ProjectCard({
         borderColor: '#292C34',
       }}
       onMouseEnter={(e) => {
-        e.currentTarget.style.borderColor = '#E3646E';
-        e.currentTarget.style.boxShadow = '0 0 30px rgba(227, 100, 110, 0.25)';
+        e.currentTarget.style.borderColor = '#3996DB';
+        e.currentTarget.style.boxShadow = '0 0 30px rgba(57, 150, 219, 0.25)';
       }}
       onMouseLeave={(e) => {
         e.currentTarget.style.borderColor = '#292C34';

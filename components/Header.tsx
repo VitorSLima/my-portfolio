@@ -22,6 +22,9 @@ export default function Header() {
       }}
     >
       <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-6 py-3">
+        {/* Spacer for balance */}
+        <div className="w-16" />
+        {/* Centered navigation */}
         <nav className="flex items-center gap-2">
           {links.map((link) => (
             <a
@@ -34,6 +37,7 @@ export default function Header() {
             </a>
           ))}
         </nav>
+        {/* Language switcher */}
         <LanguageSwitcher />
       </div>
     </header>

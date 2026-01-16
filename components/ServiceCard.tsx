@@ -21,8 +21,8 @@ export default function ServiceCard({
         borderColor: '#292C34',
       }}
       onMouseEnter={(e) => {
-        e.currentTarget.style.borderColor = '#E3646E';
-        e.currentTarget.style.boxShadow = '0 0 20px rgba(227, 100, 110, 0.15)';
+        e.currentTarget.style.borderColor = '#3996DB';
+        e.currentTarget.style.boxShadow = '0 0 20px rgba(57, 150, 219, 0.15)';
       }}
       onMouseLeave={(e) => {
         e.currentTarget.style.borderColor = '#292C34';
@@ -35,7 +35,7 @@ export default function ServiceCard({
         style={{ 
           backgroundColor: 'rgba(41, 44, 52, 0.5)',
           borderColor: '#292C34',
-          color: '#E3646E'
+          color: '#3996DB'
         }}
       >
         <Icon size={22} />
