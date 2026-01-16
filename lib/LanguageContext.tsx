@@ -12,7 +12,7 @@ type LanguageContextType = {
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
-  const [locale, setLocaleState] = useState<Locale>("pt");
+  const [locale, setLocaleState] = useState<Locale>("en");
 
   useEffect(() => {
     // Recuperar idioma salvo no localStorage
@@ -21,6 +21,11 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
       setLocaleState(saved);
     }
   }, []);
+
+  // Atualizar o atributo lang do HTML quando o idioma mudar
+  useEffect(() => {
+    document.documentElement.lang = locale === "pt" ? "pt-BR" : "en";
+  }, [locale]);
 
   const setLocale = (newLocale: Locale) => {
     setLocaleState(newLocale);

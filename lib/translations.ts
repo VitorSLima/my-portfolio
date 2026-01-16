@@ -50,32 +50,32 @@ export const translations = {
     // Projects
     projects: [
       {
-        title: "Travelgram",
+        title: "lorem ipsum",
         description:
-          "Rede social onde as pessoas mostram os registros de suas viagens pelo mundo",
+          "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
       },
       {
-        title: "Tech News",
+        title: "lorem ipsum",
         description:
-          "Homepage de um portal de notícias sobre a área de tecnologia",
+          "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
       },
       {
-        title: "Página de receita",
-        description: "Página com o passo a passo de uma receita para cupcakes",
+        title: "lorem ipsum",
+        description: "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
       },
       {
-        title: "Zingen",
+        title: "lorem ipsum",
         description:
-          "Landing Page completa e responsiva de um aplicativo de Karaokê",
+          "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
       },
       {
-        title: "Refund",
-        description: "Um sistema para pedido e acompanhamento de reembolso",
+        title: "lorem ipsum",
+        description: "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
       },
       {
-        title: "Página de turismo",
+        title: "lorem ipsum",
         description:
-          "Página com as principais informações para quem quer viajar para Busan",
+          "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
       },
     ],
   },
@@ -128,29 +128,29 @@ export const translations = {
     // Projects
     projects: [
       {
-        title: "Travelgram",
+        title: "lorem ipsum",
         description:
-          "Social network where people share their travel experiences around the world",
+          "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
       },
       {
-        title: "Tech News",
-        description: "Homepage of a tech news portal",
+        title: "lorem ipsum",
+        description: "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
       },
       {
-        title: "Recipe Page",
-        description: "Step-by-step page for a cupcake recipe",
+        title: "lorem ipsum",
+        description: "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
       },
       {
-        title: "Zingen",
-        description: "Complete and responsive Landing Page for a Karaoke app",
+        title: "lorem ipsum",
+        description: "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
       },
       {
-        title: "Refund",
-        description: "A system for refund requests and tracking",
+        title: "lorem ipsum",
+        description: "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
       },
       {
-        title: "Tourism Page",
-        description: "Page with key information for traveling to Busan",
+        title: "lorem ipsum",
+        description: "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
       },
     ],
   },

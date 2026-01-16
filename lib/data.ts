@@ -50,37 +50,37 @@ export const techs: TechItem[] = [
 // ==========================================
 export const projects: ProjectItem[] = [
   {
-    title: "Travelgram",
+    title: "Lorem ipsum",
     description:
-      "Rede social onde as pessoas mostram os registros de suas viagens pelo mundo",
+      "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
     image: "/projects/proj-1.png",
   },
   {
-    title: "Tech News",
+    title: "lorem ipsum",
     description:
-      "Homepage de um portal de notícias sobre a área de tecnologia",
+      "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
     image: "/projects/proj-2.png",
   },
   {
-    title: "Página de receita",
-    description: "Página com o passo a passo de uma receita para cupcakes",
+    title: "lorem ipsum",
+    description: "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
     image: "/projects/proj-3.png",
   },
   {
-    title: "Zingen",
+    title: "lorem ipsum",
     description:
-      "Landing Page completa e responsiva de um aplicativo de Karaokê",
+      "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
     image: "/projects/proj-4.png",
   },
   {
-    title: "Refund",
-    description: "Um sistema para pedido e acompanhamento de reembolso",
+    title: "lorem ipsum",
+    description: "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
     image: "/projects/proj-5.png",
   },
   {
-    title: "Página de turismo",
+    title: "lorem ipsum",
     description:
-      "Página com as principais informações para quem quer viajar para Busan",
+      "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
     image: "/projects/proj-6.png",
   },
 ];
