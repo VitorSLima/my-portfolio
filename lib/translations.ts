@@ -1,5 +1,7 @@
 export type Locale = "pt" | "en";
 
+export type ProjectSlug = "beautydesk" | "comandei";
+
 export const translations = {
   pt: {
     // Header
@@ -47,37 +49,62 @@ export const translations = {
       title: "Gostou do meu trabalho?",
       description: "Entre em contato ou acompanhe as minhas redes sociais!",
     },
+    // Rótulos da página e do card de projeto
+    project: {
+      viewSite: "Ver site",
+      back: "Voltar aos projetos",
+      features: "Funcionalidades",
+      stack: "Tecnologias",
+      previous: "Imagem anterior",
+      next: "Próxima imagem",
+    },
     // Projects
-    projects: [
-      {
-        title: "Barber Shop",
+    projects: {
+      beautydesk: {
+        title: "BeautyDesk",
+        tagline: "Agendamento online para negócios de beleza",
         description:
-          "Um sistema de agendamento e gestão de barbearia com interface intuitiva e foco em usabilidade, permitindo cadastrar serviços, horários e clientes de forma prática e eficiente.",
+          "Plataforma de agendamento para barbearias, salões e outros negócios de beleza. O cliente encontra o estabelecimento e reserva um horário; o profissional gerencia agenda, serviços, equipe e financeiro em um painel próprio, com notificações e assinatura do plano.",
+        features: [
+          "Busca de estabelecimentos e reserva de horário online",
+          "Painel do profissional com agenda, clientes e financeiro",
+          "Cadastro de serviços e equipe",
+          "Notificações de agendamento",
+          "Assinatura de plano com Stripe",
+          "Painel administrativo da plataforma",
+        ],
+        screenshots: {
+          home: "Página inicial com busca de estabelecimentos",
+          estabelecimento: "Página do estabelecimento com serviços e reserva",
+          painel: "Painel do profissional",
+          agendamentos: "Agenda de atendimentos",
+          servicos: "Cadastro de serviços",
+          financeiro: "Resumo financeiro",
+        },
       },
-      {
-        title: "lorem ipsum",
+      comandei: {
+        title: "Comandei",
+        tagline: "Comandas para bares e restaurantes",
         description:
-          "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+          "Sistema de atendimento por mesa para bares e restaurantes. O atendente escolhe a mesa e lança os itens do cardápio; o dono acompanha as contas abertas, fecha cada conta com desconto, taxa de serviço e divisão por pessoas, e consulta histórico e financeiro. Cada estabelecimento vê só os próprios dados.",
+        features: [
+          "Mapa de mesas com contas abertas",
+          "Lançamento de pedidos pelo atendente",
+          "Fechamento com desconto, taxa de serviço e divisão por pessoas",
+          "Cardápio e equipe gerenciados pelo dono",
+          "Histórico e financeiro",
+          "Vários estabelecimentos com dados isolados",
+          "Assinatura com 7 dias grátis via Stripe",
+        ],
+        screenshots: {
+          mesas: "Mapa de mesas com contas abertas",
+          pedido: "Lançamento de pedidos da mesa",
+          fechamento: "Fechamento de conta",
+          cardapio: "Gestão do cardápio",
+          financeiro: "Resumo financeiro",
+        },
       },
-      {
-        title: "lorem ipsum",
-        description: "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
-      },
-      {
-        title: "lorem ipsum",
-        description:
-          "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
-      },
-      {
-        title: "lorem ipsum",
-        description: "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
-      },
-      {
-        title: "lorem ipsum",
-        description:
-          "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
-      },
-    ],
+    },
   },
   en: {
     // Header
@@ -125,35 +152,71 @@ export const translations = {
       title: "Liked my work?",
       description: "Get in touch or follow my social media!",
     },
+    // Project page and card labels
+    project: {
+      viewSite: "View site",
+      back: "Back to projects",
+      features: "Features",
+      stack: "Tech stack",
+      previous: "Previous image",
+      next: "Next image",
+    },
     // Projects
-    projects: [
-      {
-        title: "Barber Shop",
+    projects: {
+      beautydesk: {
+        title: "BeautyDesk",
+        tagline: "Online booking for beauty businesses",
         description:
-          "A scheduling and management system for barbershops with an intuitive interface focused on usability, allowing easy registration of services, schedules, and clients.",
+          "A booking platform for barbershops, salons and other beauty businesses. Customers find a place and book a time slot; professionals manage their schedule, services, team and revenue from their own dashboard, with notifications and plan subscriptions.",
+        features: [
+          "Business search and online booking",
+          "Professional dashboard with schedule, clients and revenue",
+          "Service and team management",
+          "Booking notifications",
+          "Plan subscriptions with Stripe",
+          "Platform admin panel",
+        ],
+        screenshots: {
+          home: "Home page with business search",
+          estabelecimento: "Business page with services and booking",
+          painel: "Professional dashboard",
+          agendamentos: "Appointment schedule",
+          servicos: "Service management",
+          financeiro: "Revenue summary",
+        },
       },
-      {
-        title: "lorem ipsum",
-        description: "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+      comandei: {
+        title: "Comandei",
+        tagline: "Tab management for bars and restaurants",
+        description:
+          "A table service system for bars and restaurants. Staff pick a table and add items from the menu; the owner tracks open tabs, closes each one with discounts, service charge and bill splitting, and reviews history and revenue. Each business only sees its own data.",
+        features: [
+          "Table map with open tabs",
+          "Order entry by staff",
+          "Checkout with discounts, service charge and bill splitting",
+          "Menu and team managed by the owner",
+          "History and revenue",
+          "Multiple businesses with isolated data",
+          "Subscription with a 7-day free trial via Stripe",
+        ],
+        screenshots: {
+          mesas: "Table map with open tabs",
+          pedido: "Order entry for a table",
+          fechamento: "Closing a tab",
+          cardapio: "Menu management",
+          financeiro: "Revenue summary",
+        },
       },
-      {
-        title: "lorem ipsum",
-        description: "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
-      },
-      {
-        title: "lorem ipsum",
-        description: "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
-      },
-      {
-        title: "lorem ipsum",
-        description: "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
-      },
-      {
-        title: "lorem ipsum",
-        description: "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
-      },
-    ],
+    },
   },
+};
+
+export type ProjectText = {
+  title: string;
+  tagline: string;
+  description: string;
+  features: string[];
+  screenshots: Record<string, string>;
 };
 
 export type Translations = {
@@ -186,8 +249,13 @@ export type Translations = {
     title: string;
     description: string;
   };
-  projects: Array<{
-    title: string;
-    description: string;
-  }>;
+  project: {
+    viewSite: string;
+    back: string;
+    features: string;
+    stack: string;
+    previous: string;
+    next: string;
+  };
+  projects: Record<ProjectSlug, ProjectText>;
 };

@@ -1,22 +1,34 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
+import { ExternalLink } from "lucide-react";
+
+import TechTag from "./TechTag";
 
 type ProjectCardProps = {
+  slug: string;
   title: string;
-  description: string;
-  image: string;
+  tagline: string;
+  cover: string;
+  url: string;
+  techs: string[];
+  viewSiteLabel: string;
 };
 
 export default function ProjectCard({
+  slug,
   title,
-  description,
-  image,
+  tagline,
+  cover,
+  url,
+  techs,
+  viewSiteLabel,
 }: ProjectCardProps) {
   return (
-    <div 
-      className="group cursor-pointer overflow-hidden rounded-2xl border transition-all duration-300 hover:-translate-y-1"
-      style={{ 
+    <div
+      className="group overflow-hidden rounded-2xl border transition-all duration-300 hover:-translate-y-1"
+      style={{
         backgroundColor: '#16181D',
         borderColor: '#292C34',
       }}
@@ -29,22 +41,39 @@ export default function ProjectCard({
         e.currentTarget.style.boxShadow = 'none';
       }}
     >
-      <figure className="relative h-44 w-full overflow-hidden">
-        <Image
-          src={image}
-          alt={title}
-          fill
-          sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
-          className="object-cover transition-transform duration-300 group-hover:scale-105"
-        />
-      </figure>
-      <div className="p-4">
-        <h3 className="font-asap mb-2 text-lg font-semibold" style={{ color: '#E2E4E9' }}>
+      <Link href={`/projetos/${slug}`} className="block">
+        <figure className="relative h-44 w-full overflow-hidden">
+          <Image
+            src={cover}
+            alt={title}
+            fill
+            sizes="(min-width: 640px) 50vw, 100vw"
+            className="object-cover object-top transition-transform duration-300 group-hover:scale-105"
+          />
+        </figure>
+        <h3 className="font-asap px-4 pt-4 text-lg font-semibold" style={{ color: '#E2E4E9' }}>
           {title}
         </h3>
-        <p className="text-sm leading-relaxed" style={{ color: '#878EA1' }}>
-          {description}
+      </Link>
+      <div className="px-4 pb-4 pt-2">
+        <p className="mb-3 text-sm leading-relaxed" style={{ color: '#878EA1' }}>
+          {tagline}
         </p>
+        <div className="mb-4 flex flex-wrap gap-2">
+          {techs.map((tech) => (
+            <TechTag key={tech} label={tech} />
+          ))}
+        </div>
+        <a
+          href={url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 text-sm font-medium transition-opacity hover:opacity-80"
+          style={{ color: '#3996DB' }}
+        >
+          {viewSiteLabel}
+          <ExternalLink size={14} />
+        </a>
       </div>
     </div>
   );

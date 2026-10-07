@@ -10,7 +10,7 @@ import Section from "@/components/Section";
 import ServiceCard from "@/components/ServiceCard";
 import SocialButton from "@/components/SocialButton";
 import TechChip from "@/components/TechChip";
-import { socials, techs } from "@/lib/data";
+import { projects, socials, techs } from "@/lib/data";
 import { useLanguage } from "@/lib/LanguageContext";
 import { Monitor, Database, Cloud } from "lucide-react";
 
@@ -18,16 +18,6 @@ import { Monitor, Database, Cloud } from "lucide-react";
 // DADOS DO PERFIL
 // ==========================================
 const NAME = "Vitor dos Santos Lima";
-
-// Imagens dos projetos
-const projectImages = [
-  "/projects/barber-shop.png",
-  "/projects/proj-2.png",
-  "/projects/proj-3.png",
-  "/projects/proj-4.png",
-  "/projects/proj-5.png",
-  "/projects/proj-6.png",
-];
 
 // Ícones dos serviços
 const serviceIcons = [Monitor, Database, Cloud];
@@ -132,13 +122,17 @@ export default function Home() {
             </div>
 
             {/* Grid de projetos */}
-            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              {t.projects.map((project, index) => (
+            <div className="mx-auto grid max-w-4xl gap-6 sm:grid-cols-2">
+              {projects.map((project) => (
                 <ProjectCard
-                  key={project.title}
-                  title={project.title}
-                  description={project.description}
-                  image={projectImages[index]}
+                  key={project.slug}
+                  slug={project.slug}
+                  title={t.projects[project.slug].title}
+                  tagline={t.projects[project.slug].tagline}
+                  cover={project.cover}
+                  url={project.url}
+                  techs={project.techs}
+                  viewSiteLabel={t.project.viewSite}
                 />
               ))}
             </div>

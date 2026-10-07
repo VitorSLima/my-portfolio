@@ -7,16 +7,21 @@ import {
   Database,
   Cloud,
 } from "lucide-react";
+import type { ProjectSlug } from "./translations";
 
 type TechItem = {
   label: string;
   image: string;
 };
 
+type ScreenshotKey = string;
+
 type ProjectItem = {
-  title: string;
-  description: string;
-  image: string;
+  slug: ProjectSlug;
+  cover: string;
+  url: string;
+  techs: string[];
+  screenshots: ScreenshotKey[];
 };
 
 type ServiceItem = {
@@ -46,44 +51,40 @@ export const techs: TechItem[] = [
 
 // ==========================================
 // PROJETOS
-// As imagens estão em /public/projects/
+// Imagens em /public/projects/<slug>/
+// Textos em lib/translations.ts, pelo slug
 // ==========================================
 export const projects: ProjectItem[] = [
   {
-    title: "Barber Shop",
-    description:
-      "Um sistema de agendamento e gestão de barbearia com interface intuitiva e foco em usabilidade, permitindo cadastrar serviços, horários e clientes de forma prática e eficiente.",
-    image: "/projects/barber-shop.png",
+    slug: "beautydesk",
+    cover: "/projects/beautydesk/cover.png",
+    url: "https://beautydesk-manager.vercel.app",
+    techs: ["Next.js", "TypeScript", "Prisma", "PostgreSQL", "Stripe"],
+    screenshots: [
+      "home",
+      "estabelecimento",
+      "painel",
+      "agendamentos",
+      "servicos",
+      "financeiro",
+    ],
   },
   {
-    title: "lorem ipsum",
-    description:
-      "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
-    image: "/projects/proj-2.png",
-  },
-  {
-    title: "lorem ipsum",
-    description: "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
-    image: "/projects/proj-3.png",
-  },
-  {
-    title: "lorem ipsum",
-    description:
-      "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
-    image: "/projects/proj-4.png",
-  },
-  {
-    title: "lorem ipsum",
-    description: "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
-    image: "/projects/proj-5.png",
-  },
-  {
-    title: "lorem ipsum",
-    description:
-      "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
-    image: "/projects/proj-6.png",
+    slug: "comandei",
+    cover: "/projects/comandei/cover.png",
+    url: "https://comandei.vercel.app",
+    techs: ["Next.js", "TypeScript", "Drizzle", "PostgreSQL", "Stripe"],
+    screenshots: ["mesas", "pedido", "fechamento", "cardapio", "financeiro"],
   },
 ];
+
+export function getProject(slug: string) {
+  return projects.find((project) => project.slug === slug);
+}
+
+export function screenshotSrc(slug: ProjectSlug, key: ScreenshotKey) {
+  return `/projects/${slug}/${key}.png`;
+}
 
 // ==========================================
 // SERVIÇOS
