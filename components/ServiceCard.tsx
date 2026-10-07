@@ -1,5 +1,3 @@
-"use client";
-
 import type { ElementType } from "react";
 
 type ServiceCardProps = {
@@ -15,18 +13,10 @@ export default function ServiceCard({
 }: ServiceCardProps) {
   return (
     <div 
-      className="group rounded-2xl border p-6 transition-all duration-300 hover:-translate-y-1"
+      className="rounded-2xl border p-6 transition-all duration-300 hover:-translate-y-1 hover:!border-[#3996DB] hover:shadow-[0_0_20px_rgba(57,150,219,0.15)]"
       style={{ 
         backgroundColor: '#16181D',
         borderColor: '#292C34',
-      }}
-      onMouseEnter={(e) => {
-        e.currentTarget.style.borderColor = '#3996DB';
-        e.currentTarget.style.boxShadow = '0 0 20px rgba(57, 150, 219, 0.15)';
-      }}
-      onMouseLeave={(e) => {
-        e.currentTarget.style.borderColor = '#292C34';
-        e.currentTarget.style.boxShadow = 'none';
       }}
     >
       {/* Ícone */}

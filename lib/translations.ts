@@ -95,15 +95,18 @@ export const translations = {
       items: [
         {
           title: "Websites e Aplicativos",
-          description: "Desenvolvimento de interfaces",
+          description:
+            "Interfaces rápidas e responsivas com React e Next.js, de landing pages a painéis completos, com atenção a acessibilidade e SEO.",
         },
         {
           title: "API e banco de dados",
-          description: "Criação de serviços do sistema",
+          description:
+            "APIs com Node.js e NestJS, modelagem em PostgreSQL e MongoDB, cache com Redis e integrações como pagamentos com Stripe.",
         },
         {
           title: "DevOps",
-          description: "Gestão e infraestrutura da aplicação",
+          description:
+            "Pipelines de CI/CD, containers com Docker, deploy na AWS e armazenamento em Cloudflare R2, com foco em custo e estabilidade.",
         },
       ],
     },
@@ -265,15 +268,18 @@ export const translations = {
       items: [
         {
           title: "Websites & Apps",
-          description: "Interface development",
+          description:
+            "Fast, responsive interfaces with React and Next.js, from landing pages to full dashboards, with attention to accessibility and SEO.",
         },
         {
           title: "API & Database",
-          description: "System services creation",
+          description:
+            "APIs with Node.js and NestJS, PostgreSQL and MongoDB modeling, Redis caching and integrations such as Stripe payments.",
         },
         {
           title: "DevOps",
-          description: "Application management and infrastructure",
+          description:
+            "CI/CD pipelines, Docker containers, AWS deploys and Cloudflare R2 storage, with a focus on cost and stability.",
         },
       ],
     },
