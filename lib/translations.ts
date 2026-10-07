@@ -17,8 +17,9 @@ export const translations = {
       greeting: "Hello World! Meu nome é",
       role: "e sou",
       title: "Desenvolvedor Fullstack",
+      available: "Disponível para novos projetos",
       description:
-        "Transformo necessidades em aplicações reais, envolventes e funcionais. Desenvolvo sistemas através da minha paixão pela tecnologia, contribuindo com soluções inovadoras e eficazes para desafios complexos.",
+        "Construo produtos web completos, do front-end em React e Next.js à API, ao banco de dados e ao deploy. Transformo uma necessidade de negócio em um sistema no ar, como o BeautyDesk e o Comandei, que estão em produção.",
     },
     // Work
     work: {
@@ -186,8 +187,9 @@ export const translations = {
       greeting: "Hello World! My name is",
       role: "and I'm a",
       title: "Fullstack Developer",
+      available: "Available for new projects",
       description:
-        "I transform needs into real, engaging and functional applications. I develop systems through my passion for technology, contributing with innovative and effective solutions for complex challenges.",
+        "I build complete web products, from the React and Next.js front end to the API, the database and the deploy. I turn a business need into a live system, like BeautyDesk and Comandei, both in production.",
     },
     // Work
     work: {
@@ -363,6 +365,7 @@ export type Translations = {
     greeting: string;
     role: string;
     title: string;
+    available: string;
     description: string;
   };
   work: {

@@ -50,8 +50,20 @@ export default function Home() {
           </div>
 
           <Container className="relative z-10 flex min-h-screen flex-col items-center justify-center py-20 text-center">
+            {/* Disponibilidade */}
+            <p
+              className="font-inconsolata animate-rise mb-6 inline-flex items-center gap-2 rounded-full border px-4 py-1.5 text-xs"
+              style={{ borderColor: '#292C34', backgroundColor: 'rgba(22, 24, 29, 0.8)', color: '#C0C4CE' }}
+            >
+              <span className="relative flex h-2 w-2">
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full opacity-75" style={{ backgroundColor: '#4ADE80' }} />
+                <span className="relative inline-flex h-2 w-2 rounded-full" style={{ backgroundColor: '#4ADE80' }} />
+              </span>
+              {t.hero.available}
+            </p>
+
             {/* Avatar com badge dev-code.png */}
-            <div className="relative mb-8">
+            <div className="animate-rise relative mb-8" style={{ animationDelay: '80ms' }}>
               <div className="h-48 w-48 overflow-hidden rounded-full border-2 border-gray-600">
                 <Image
                   src="/profile.jpeg"
@@ -74,23 +86,23 @@ export default function Home() {
             </div>
 
             {/* Texto de introdução */}
-            <p className="font-inconsolata mb-2 text-base" style={{ color: '#C0C4CE' }}>
+            <p className="font-inconsolata animate-rise mb-2 text-base" style={{ color: '#C0C4CE', animationDelay: '160ms' }}>
               {t.hero.greeting}{" "}
               <span className="font-semibold" style={{ color: '#3996DB' }}>{NAME}</span> {t.hero.role}
             </p>
 
             {/* Título principal */}
-            <h1 className="font-asap mb-6 text-4xl font-bold sm:text-5xl lg:text-6xl" style={{ color: '#E2E4E9' }}>
+            <h1 className="font-asap animate-rise mb-6 text-4xl font-bold sm:text-5xl lg:text-6xl" style={{ color: '#E2E4E9', animationDelay: '240ms' }}>
               {t.hero.title}
             </h1>
 
             {/* Descrição */}
-            <p className="font-maven mb-10 max-w-2xl text-sm leading-relaxed sm:text-base" style={{ color: '#878EA1' }}>
+            <p className="font-maven animate-rise mb-10 max-w-2xl text-sm leading-relaxed sm:text-base" style={{ color: '#878EA1', animationDelay: '320ms' }}>
               {t.hero.description}
             </p>
 
             {/* Tech chips */}
-            <div className="mb-12 flex flex-wrap justify-center gap-3">
+            <div className="animate-rise mb-12 flex flex-wrap justify-center gap-3" style={{ animationDelay: '400ms' }}>
               {techs.map((tech) => (
                 <TechChip key={tech.label} label={tech.label} image={tech.image} />
               ))}
@@ -100,8 +112,8 @@ export default function Home() {
             <a
               href={cv.href}
               download={cv.fileName}
-              className="font-maven mb-12 inline-flex items-center gap-2 rounded-lg px-6 py-3 text-sm font-semibold transition-opacity hover:opacity-90"
-              style={{ backgroundColor: '#3996DB', color: '#0D0E11' }}
+              className="font-maven animate-rise mb-12 inline-flex items-center gap-2 rounded-lg px-6 py-3 text-sm font-semibold transition-opacity hover:opacity-90"
+              style={{ backgroundColor: '#3996DB', color: '#0D0E11', animationDelay: '480ms' }}
             >
               <Download size={18} />
               {t.cv.download}
