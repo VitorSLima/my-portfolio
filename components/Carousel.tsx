@@ -2,7 +2,9 @@
 
 import { useRef, useState } from "react";
 import Image from "next/image";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { ChevronLeft, ChevronRight, Maximize2 } from "lucide-react";
+
+import Lightbox from "./Lightbox";
 
 type Slide = {
   src: string;
@@ -13,16 +15,34 @@ type CarouselProps = {
   slides: Slide[];
   previousLabel: string;
   nextLabel: string;
+  zoomLabel: string;
+  closeLabel: string;
 };
 
-export default function Carousel({ slides, previousLabel, nextLabel }: CarouselProps) {
+export default function Carousel({
+  slides,
+  previousLabel,
+  nextLabel,
+  zoomLabel,
+  closeLabel,
+}: CarouselProps) {
   const trackRef = useRef<HTMLDivElement>(null);
   const [current, setCurrent] = useState(0);
+  const [zoomIndex, setZoomIndex] = useState<number | null>(null);
 
   const goTo = (index: number) => {
     const track = trackRef.current;
     if (!track) return;
     track.scrollTo({ left: index * track.clientWidth, behavior: "smooth" });
+  };
+
+  // Ao fechar o modal, o carrossel acompanha a imagem que estava aberta
+  const handleCloseZoom = () => {
+    const track = trackRef.current;
+    if (track && zoomIndex !== null) {
+      track.scrollTo({ left: zoomIndex * track.clientWidth, behavior: "instant" });
+    }
+    setZoomIndex(null);
   };
 
   const handleScroll = () => {
@@ -47,14 +67,28 @@ export default function Carousel({ slides, previousLabel, nextLabel }: CarouselP
         >
           {slides.map((slide, index) => (
             <div key={slide.src} className="relative aspect-[16/10] w-full shrink-0 snap-center">
-              <Image
-                src={slide.src}
-                alt={slide.alt}
-                fill
-                priority={index === 0}
-                sizes="(min-width: 1024px) 896px, 100vw"
-                className="object-contain"
-              />
+              <button
+                type="button"
+                onClick={() => setZoomIndex(index)}
+                aria-label={`${zoomLabel}: ${slide.alt}`}
+                className="group absolute inset-0 block cursor-zoom-in"
+              >
+                <Image
+                  src={slide.src}
+                  alt={slide.alt}
+                  fill
+                  priority={index === 0}
+                  sizes="(min-width: 1024px) 896px, 100vw"
+                  className="object-contain"
+                />
+                <span
+                  aria-hidden="true"
+                  className="pointer-events-none absolute right-3 top-3 rounded-full border p-2 opacity-70 transition-opacity group-hover:opacity-100"
+                  style={{ backgroundColor: 'rgba(13, 14, 17, 0.8)', borderColor: '#292C34', color: '#E2E4E9' }}
+                >
+                  <Maximize2 size={16} />
+                </span>
+              </button>
             </div>
           ))}
         </div>
@@ -101,6 +135,16 @@ export default function Carousel({ slides, previousLabel, nextLabel }: CarouselP
           />
         ))}
       </div>
+
+      <Lightbox
+        slides={slides}
+        index={zoomIndex}
+        onIndexChange={setZoomIndex}
+        onClose={handleCloseZoom}
+        previousLabel={previousLabel}
+        nextLabel={nextLabel}
+        closeLabel={closeLabel}
+      />
     </div>
   );
 }

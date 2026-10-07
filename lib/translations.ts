@@ -124,6 +124,8 @@ export const translations = {
       stack: "Tecnologias",
       previous: "Imagem anterior",
       next: "Próxima imagem",
+      zoom: "Ampliar imagem",
+      close: "Fechar",
     },
     // Projects
     projects: {
@@ -291,6 +293,8 @@ export const translations = {
       stack: "Tech stack",
       previous: "Previous image",
       next: "Next image",
+      zoom: "Enlarge image",
+      close: "Close",
     },
     // Projects
     projects: {
@@ -401,6 +405,8 @@ export type Translations = {
     stack: string;
     previous: string;
     next: string;
+    zoom: string;
+    close: string;
   };
   projects: Record<ProjectSlug, ProjectText>;
 };

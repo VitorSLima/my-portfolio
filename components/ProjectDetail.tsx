@@ -51,6 +51,8 @@ export default function ProjectDetail({ slug }: ProjectDetailProps) {
         slides={slides}
         previousLabel={t.project.previous}
         nextLabel={t.project.next}
+        zoomLabel={t.project.zoom}
+        closeLabel={t.project.close}
       />
 
       {/* Descrição */}

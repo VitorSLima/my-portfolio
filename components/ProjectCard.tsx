@@ -42,7 +42,7 @@ export default function ProjectCard({
       }}
     >
       <Link href={`/projetos/${slug}`} className="block">
-        <figure className="relative h-44 w-full overflow-hidden">
+        <figure className="relative h-56 w-full overflow-hidden">
           <Image
             src={cover}
             alt={title}
