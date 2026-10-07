@@ -74,12 +74,9 @@ export const translations = {
           "Painel administrativo da plataforma",
         ],
         screenshots: {
-          home: "Página inicial com busca de estabelecimentos",
           estabelecimento: "Página do estabelecimento com serviços e reserva",
-          painel: "Painel do profissional",
-          agendamentos: "Agenda de atendimentos",
-          servicos: "Cadastro de serviços",
-          financeiro: "Resumo financeiro",
+          servicos: "Gestão de serviços no painel do profissional",
+          financeiro: "Financeiro do profissional",
         },
       },
       comandei: {
@@ -177,12 +174,9 @@ export const translations = {
           "Platform admin panel",
         ],
         screenshots: {
-          home: "Home page with business search",
           estabelecimento: "Business page with services and booking",
-          painel: "Professional dashboard",
-          agendamentos: "Appointment schedule",
-          servicos: "Service management",
-          financeiro: "Revenue summary",
+          servicos: "Service management in the professional dashboard",
+          financeiro: "Professional revenue overview",
         },
       },
       comandei: {

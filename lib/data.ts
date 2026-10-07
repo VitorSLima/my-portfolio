@@ -60,14 +60,7 @@ export const projects: ProjectItem[] = [
     cover: "/projects/beautydesk/cover.png",
     url: "https://beautydesk-manager.vercel.app",
     techs: ["Next.js", "TypeScript", "Prisma", "PostgreSQL", "Stripe"],
-    screenshots: [
-      "home",
-      "estabelecimento",
-      "painel",
-      "agendamentos",
-      "servicos",
-      "financeiro",
-    ],
+    screenshots: ["estabelecimento", "servicos", "financeiro"],
   },
   {
     slug: "comandei",

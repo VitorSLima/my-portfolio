@@ -38,7 +38,7 @@
 | `components/ProjectDetail.tsx` | criar | Conteúdo da página de um projeto |
 | `app/projetos/[slug]/page.tsx` | criar | Rota estática, metadata e 404 |
 | `components/index.ts` | modificar | Exportar os componentes novos |
-| `public/projects/beautydesk/*.png` | criar | Capa e 6 telas |
+| `public/projects/beautydesk/*.png` | criar | Capa e 3 telas |
 | `public/projects/comandei/*.png` | criar | Capa e 5 telas |
 
 ---
@@ -146,12 +146,9 @@ Em `lib/translations.ts`, dentro de `pt`, substituir todo o trecho que vai de `/
           "Painel administrativo da plataforma",
         ],
         screenshots: {
-          home: "Página inicial com busca de estabelecimentos",
           estabelecimento: "Página do estabelecimento com serviços e reserva",
-          painel: "Painel do profissional",
-          agendamentos: "Agenda de atendimentos",
-          servicos: "Cadastro de serviços",
-          financeiro: "Resumo financeiro",
+          servicos: "Gestão de serviços no painel do profissional",
+          financeiro: "Financeiro do profissional",
         },
       },
       comandei: {
@@ -209,12 +206,9 @@ Dentro de `en`, substituir do mesmo modo o trecho de `// Projects` até o `],` q
           "Platform admin panel",
         ],
         screenshots: {
-          home: "Home page with business search",
           estabelecimento: "Business page with services and booking",
-          painel: "Professional dashboard",
-          agendamentos: "Appointment schedule",
-          servicos: "Service management",
-          financeiro: "Revenue summary",
+          servicos: "Service management in the professional dashboard",
+          financeiro: "Professional revenue overview",
         },
       },
       comandei: {
@@ -315,14 +309,7 @@ export const projects: ProjectItem[] = [
     cover: "/projects/beautydesk/cover.png",
     url: "https://beautydesk-manager.vercel.app",
     techs: ["Next.js", "TypeScript", "Prisma", "PostgreSQL", "Stripe"],
-    screenshots: [
-      "home",
-      "estabelecimento",
-      "painel",
-      "agendamentos",
-      "servicos",
-      "financeiro",
-    ],
+    screenshots: ["estabelecimento", "servicos", "financeiro"],
   },
   {
     slug: "comandei",
@@ -943,7 +930,7 @@ Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>"
 Depende do usuário: ele precisa estar logado nas contas de demonstração no Chrome. **Não rodar `seed` nem `migrate`, não criar, editar ou apagar nada nos sistemas: só navegar e capturar.**
 
 **Files:**
-- Create: `public/projects/beautydesk/{cover,home,estabelecimento,painel,agendamentos,servicos,financeiro}.png`
+- Create: `public/projects/beautydesk/{cover,estabelecimento,servicos,financeiro}.png`
 - Create: `public/projects/comandei/{cover,mesas,pedido,fechamento,cardapio,financeiro}.png`
 
 - [ ] **Step 1: Pedir o login ao usuário**

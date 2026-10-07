@@ -132,10 +132,12 @@ Ficam em `public/projects/<slug>/`. `public/projects/barber-shop.png` é removid
 
 | Projeto | Capa | Telas do carrossel |
 |---|---|---|
-| BeautyDesk | home pública | home · página de um estabelecimento com reserva · painel do profissional · agendamentos · serviços · financeiro |
+| BeautyDesk | serviços (a home pública redireciona profissionais logados) | página de um estabelecimento com reserva · serviços · financeiro |
 | Comandei | mapa de mesas | mapa de mesas · pedido de uma mesa · fechamento de conta · cardápio · financeiro |
 
-**Origem das capturas.** Vêm das contas de demonstração que já existem em cada sistema em produção. O usuário entra na conta demo no próprio Chrome e as capturas são feitas nessa sessão, em janela de 1440×900; nenhuma senha passa pela conversa. Nada é gravado: as telas são só visitadas, e nenhum `seed` ou `migrate` é executado. Se alguma tela mostrar dado de cliente real (nome, telefone, e-mail), essa captura é descartada. Todas as imagens são mostradas ao usuário antes do commit.
+**Conjunto final do BeautyDesk.** Ficaram 3 telas em vez das 6 previstas: a home pública não pôde ser capturada com a sessão de profissional ativa, o painel "Hoje" e a lista de agendamentos estavam vazios, e a lista de clientes mostrava o nome do próprio autor. O painel `/admin` (super usuário) foi deixado de fora de propósito, porque mostra dados de toda a plataforma.
+
+**Origem das capturas.** O usuário entra nas contas no próprio Chrome e as capturas são feitas nessa sessão, em janela de 1440×900; nenhuma senha passa pela conversa. Nada é gravado: as telas são só visitadas, e nenhum `seed` ou `migrate` é executado. Nenhuma tela mostra dado de cliente real. Para o Comandei, a conta original do estabelecimento de produção foi descartada (nome, logo e cardápio reais) e as capturas vêm de um estabelecimento fictício de demonstração, o "Boteco Aurora". No BeautyDesk, o link de convite do profissional (que contém um código) é escondido na própria página antes de capturar.
 
 ## Fora do escopo
 
