@@ -7,6 +7,7 @@ import Container from "@/components/Container";
 import Header from "@/components/Header";
 import ExperienceItem from "@/components/ExperienceItem";
 import ProjectCard from "@/components/ProjectCard";
+import Reveal from "@/components/Reveal";
 import Section from "@/components/Section";
 import ServiceCard from "@/components/ServiceCard";
 import SocialButton from "@/components/SocialButton";
@@ -137,20 +138,20 @@ export default function Home() {
         <Section id="work" className="py-20" style={{ backgroundColor: '#0D0E11' }}>
           <Container>
             {/* Cabeçalho */}
-            <div className="mb-12 text-center">
+            <Reveal className="mb-12 text-center">
               <p className="font-inconsolata mb-2 text-sm uppercase tracking-widest" style={{ color: '#3996DB' }}>
                 {t.work.label}
               </p>
               <h2 className="font-asap text-2xl font-bold sm:text-3xl" style={{ color: '#E2E4E9' }}>
                 {t.work.title}
               </h2>
-            </div>
+            </Reveal>
 
             {/* Grid de projetos */}
             <div className="mx-auto grid max-w-4xl gap-6 sm:grid-cols-2">
-              {projects.map((project) => (
+              {projects.map((project, index) => (
+                <Reveal key={project.slug} delay={index * 100}>
                 <ProjectCard
-                  key={project.slug}
                   slug={project.slug}
                   title={t.projects[project.slug].title}
                   tagline={t.projects[project.slug].tagline}
@@ -159,6 +160,7 @@ export default function Home() {
                   techs={project.techs}
                   viewSiteLabel={t.project.viewSite}
                 />
+                </Reveal>
               ))}
             </div>
           </Container>
@@ -170,19 +172,21 @@ export default function Home() {
         <Section id="experience" className="py-20" style={{ backgroundColor: '#16181D' }}>
           <Container>
             {/* Cabeçalho */}
-            <div className="mb-12 text-center">
+            <Reveal className="mb-12 text-center">
               <p className="font-inconsolata mb-2 text-sm uppercase tracking-widest" style={{ color: '#3996DB' }}>
                 {t.experience.label}
               </p>
               <h2 className="font-asap text-2xl font-bold sm:text-3xl" style={{ color: '#E2E4E9' }}>
                 {t.experience.title}
               </h2>
-            </div>
+            </Reveal>
 
             {/* Números de destaque */}
             <div className="mx-auto mb-14 grid max-w-4xl gap-4 sm:grid-cols-3">
-              {t.experience.stats.map((stat) => (
-                <StatCard key={stat.value} value={stat.value} label={stat.label} />
+              {t.experience.stats.map((stat, index) => (
+                <Reveal key={stat.value} delay={index * 100}>
+                  <StatCard value={stat.value} label={stat.label} />
+                </Reveal>
               ))}
             </div>
 
@@ -211,24 +215,25 @@ export default function Home() {
         <Section id="services" className="py-20" style={{ backgroundColor: '#0D0E11' }}>
           <Container>
             {/* Cabeçalho */}
-            <div className="mb-12 text-center">
+            <Reveal className="mb-12 text-center">
               <p className="font-inconsolata mb-2 text-sm uppercase tracking-widest" style={{ color: '#3996DB' }}>
                 {t.services.label}
               </p>
               <h2 className="font-asap text-2xl font-bold sm:text-3xl" style={{ color: '#E2E4E9' }}>
                 {t.services.title}
               </h2>
-            </div>
+            </Reveal>
 
             {/* Cards de serviços */}
             <div className="mx-auto grid max-w-4xl gap-6 sm:grid-cols-2 lg:grid-cols-3">
               {t.services.items.map((service, index) => (
-                <ServiceCard
-                  key={service.title}
-                  title={service.title}
-                  description={service.description}
-                  Icon={serviceIcons[index]}
-                />
+                <Reveal key={service.title} delay={index * 100}>
+                  <ServiceCard
+                    title={service.title}
+                    description={service.description}
+                    Icon={serviceIcons[index]}
+                  />
+                </Reveal>
               ))}
             </div>
           </Container>

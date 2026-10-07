@@ -6,10 +6,10 @@ export default function LanguageSwitcher() {
   const { locale, setLocale } = useLanguage();
 
   return (
-    <div className="flex items-center gap-1 rounded-lg border px-2 py-1" style={{ borderColor: '#292C34' }}>
+    <div className="flex items-center gap-0.5 rounded-lg border px-1 py-0.5 sm:gap-1 sm:px-2 sm:py-1" style={{ borderColor: '#292C34' }}>
       <button
         onClick={() => setLocale("pt")}
-        className={`rounded px-2 py-1 text-xs font-medium transition-colors ${
+        className={`rounded px-1.5 py-1 text-xs sm:px-2 font-medium transition-colors ${
           locale === "pt" 
             ? "bg-primary text-white" 
             : "text-gray-400 hover:text-white"
@@ -20,7 +20,7 @@ export default function LanguageSwitcher() {
       </button>
       <button
         onClick={() => setLocale("en")}
-        className={`rounded px-2 py-1 text-xs font-medium transition-colors ${
+        className={`rounded px-1.5 py-1 text-xs sm:px-2 font-medium transition-colors ${
           locale === "en" 
             ? "bg-primary text-white" 
             : "text-gray-400 hover:text-white"
