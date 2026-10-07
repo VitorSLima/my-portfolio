@@ -49,6 +49,10 @@ export const translations = {
       title: "Gostou do meu trabalho?",
       description: "Entre em contato ou acompanhe as minhas redes sociais!",
     },
+    // Currículo
+    cv: {
+      download: "Baixar CV",
+    },
     // Rótulos da página e do card de projeto
     project: {
       viewSite: "Ver site",
@@ -149,6 +153,10 @@ export const translations = {
       title: "Liked my work?",
       description: "Get in touch or follow my social media!",
     },
+    // Resume
+    cv: {
+      download: "Download CV",
+    },
     // Project page and card labels
     project: {
       viewSite: "View site",
@@ -242,6 +250,9 @@ export type Translations = {
     label: string;
     title: string;
     description: string;
+  };
+  cv: {
+    download: string;
   };
   project: {
     viewSite: string;

@@ -101,6 +101,15 @@ export const services: ServiceItem[] = [
 ];
 
 // ==========================================
+// CURRÍCULO
+// Arquivo em /public/
+// ==========================================
+export const cv = {
+  href: "/Vitor_dos_Santos_Lima_CV.pdf",
+  fileName: "Vitor_dos_Santos_Lima_CV.pdf",
+};
+
+// ==========================================
 // REDES SOCIAIS
 // ==========================================
 export const socials: SocialItem[] = [

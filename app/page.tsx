@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { ChevronsDown } from "lucide-react";
+import { ChevronsDown, Download, FileText } from "lucide-react";
 
 import Container from "@/components/Container";
 import Header from "@/components/Header";
@@ -10,7 +10,7 @@ import Section from "@/components/Section";
 import ServiceCard from "@/components/ServiceCard";
 import SocialButton from "@/components/SocialButton";
 import TechChip from "@/components/TechChip";
-import { projects, socials, techs } from "@/lib/data";
+import { cv, projects, socials, techs } from "@/lib/data";
 import { useLanguage } from "@/lib/LanguageContext";
 import { Monitor, Database, Cloud } from "lucide-react";
 
@@ -93,6 +93,17 @@ export default function Home() {
                 <TechChip key={tech.label} label={tech.label} image={tech.image} />
               ))}
             </div>
+
+            {/* Download do currículo */}
+            <a
+              href={cv.href}
+              download={cv.fileName}
+              className="font-maven mb-12 inline-flex items-center gap-2 rounded-lg px-6 py-3 text-sm font-semibold transition-opacity hover:opacity-90"
+              style={{ backgroundColor: '#3996DB', color: '#0D0E11' }}
+            >
+              <Download size={18} />
+              {t.cv.download}
+            </a>
 
             {/* Seta de scroll */}
             <a
@@ -207,6 +218,12 @@ export default function Home() {
                   Icon={social.Icon}
                 />
               ))}
+              <SocialButton
+                label={t.cv.download}
+                href={cv.href}
+                Icon={FileText}
+                download={cv.fileName}
+              />
             </div>
           </Container>
         </Section>
