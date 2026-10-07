@@ -1,5 +1,3 @@
-"use client";
-
 import type { ElementType } from "react";
 import { ArrowUpRight, Download } from "lucide-react";
 
@@ -19,7 +17,7 @@ export default function SocialButton({
 }: SocialButtonProps) {
   return (
     <a
-      className="group flex w-full items-center justify-between rounded-lg border px-5 py-4 transition-all duration-300 hover:-translate-y-0.5"
+      className="group flex w-full items-center justify-between rounded-lg border px-5 py-4 transition-all duration-300 hover:-translate-y-0.5 hover:!border-[#3996DB] hover:!bg-[rgba(57,150,219,0.1)]"
       href={href}
       {...(download
         ? { download }
@@ -28,14 +26,6 @@ export default function SocialButton({
         backgroundColor: '#16181D',
         borderColor: '#292C34',
         color: '#E2E4E9'
-      }}
-      onMouseEnter={(e) => {
-        e.currentTarget.style.borderColor = '#3996DB';
-        e.currentTarget.style.backgroundColor = 'rgba(57, 150, 219, 0.1)';
-      }}
-      onMouseLeave={(e) => {
-        e.currentTarget.style.borderColor = '#292C34';
-        e.currentTarget.style.backgroundColor = '#16181D';
       }}
     >
       <span className="flex items-center gap-3">
@@ -51,7 +41,7 @@ export default function SocialButton({
       ) : (
         <ArrowUpRight
           size={18}
-          className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+          className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 hover:!border-[#3996DB] hover:!bg-[rgba(57,150,219,0.1)]"
           style={{ color: '#3996DB' }}
         />
       )}
