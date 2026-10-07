@@ -6,3 +6,4 @@ export { default as ServiceCard } from "./ServiceCard";
 export { default as SocialButton } from "./SocialButton";
 export { default as Header } from "./Header";
 export { default as TechTag } from "./TechTag";
+export { default as Carousel } from "./Carousel";
