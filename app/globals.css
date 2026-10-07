@@ -189,3 +189,55 @@ body {
 .animate-bounce-slow {
   animation: bounce-slow 2s ease-in-out infinite;
 }
+
+
+/* ==========================================
+   FAIXA DE ETIQUETAS EM MOVIMENTO (marquee)
+   O conteúdo é renderizado duas vezes; ao deslocar -50% o fim da
+   primeira cópia encaixa exatamente no começo da segunda.
+   ========================================== */
+
+@keyframes marquee {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee {
+  overflow: hidden;
+  /* Esmaece as bordas para as etiquetas entrarem e saírem suavemente */
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
+  mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee var(--marquee-duration, 20s) linear infinite;
+}
+
+.marquee:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+/* Sem movimento: mostra uma única cópia, quebrando em linhas */
+@media (prefers-reduced-motion: reduce) {
+  .marquee {
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+
+  .marquee-track {
+    animation: none;
+    width: auto;
+  }
+
+  .marquee-copy {
+    flex-shrink: 1;
+    flex-wrap: wrap;
+  }
+
+  .marquee-copy[aria-hidden="true"] {
+    display: none;
+  }
+}

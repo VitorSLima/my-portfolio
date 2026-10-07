@@ -8,3 +8,4 @@ export { default as Header } from "./Header";
 export { default as TechTag } from "./TechTag";
 export { default as Carousel } from "./Carousel";
 export { default as ProjectDetail } from "./ProjectDetail";
+export { default as TechMarquee } from "./TechMarquee";

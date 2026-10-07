@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ExternalLink } from "lucide-react";
 
-import TechTag from "./TechTag";
+import TechMarquee from "./TechMarquee";
 
 type ProjectCardProps = {
   slug: string;
@@ -59,10 +59,8 @@ export default function ProjectCard({
         <p className="mb-3 text-sm leading-relaxed" style={{ color: '#878EA1' }}>
           {tagline}
         </p>
-        <div className="mb-4 flex flex-wrap gap-2">
-          {techs.map((tech) => (
-            <TechTag key={tech} label={tech} />
-          ))}
+        <div className="mb-4">
+          <TechMarquee techs={techs} />
         </div>
         <a
           href={url}
