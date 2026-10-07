@@ -15,10 +15,12 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
   const [locale, setLocaleState] = useState<Locale>("en");
 
   useEffect(() => {
-    // Recuperar idioma salvo no localStorage
+    // Idioma salvo no localStorage; sem preferência salva, segue o do navegador
     const saved = localStorage.getItem("locale") as Locale | null;
     if (saved && (saved === "pt" || saved === "en")) {
       setLocaleState(saved);
+    } else if (navigator.language.toLowerCase().startsWith("pt")) {
+      setLocaleState("pt");
     }
   }, []);
 
