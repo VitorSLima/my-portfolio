@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useLanguage } from "@/lib/LanguageContext";
 import LanguageSwitcher from "./LanguageSwitcher";
 
@@ -7,10 +8,10 @@ export default function Header() {
   const { t } = useLanguage();
 
   const links = [
-    { label: t.nav.home, href: "#home" },
-    { label: t.nav.work, href: "#work" },
-    { label: t.nav.services, href: "#services" },
-    { label: t.nav.contact, href: "#contact" },
+    { label: t.nav.home, href: "/#home" },
+    { label: t.nav.work, href: "/#work" },
+    { label: t.nav.services, href: "/#services" },
+    { label: t.nav.contact, href: "/#contact" },
   ];
 
   return (
@@ -27,14 +28,14 @@ export default function Header() {
         {/* Centered navigation */}
         <nav className="flex items-center gap-2">
           {links.map((link) => (
-            <a
+            <Link
               key={link.href}
               href={link.href}
               className="rounded-lg px-3 py-2 text-sm transition-colors hover:bg-white/5"
               style={{ color: '#C0C4CE' }}
             >
               {link.label}
-            </a>
+            </Link>
           ))}
         </nav>
         {/* Language switcher */}
