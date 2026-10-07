@@ -125,6 +125,8 @@ export const translations = {
       viewSite: "Ver site",
       back: "Voltar aos projetos",
       features: "Funcionalidades",
+      decisions: "Decisões técnicas",
+      nextProject: "Próximo projeto",
       stack: "Tecnologias",
       previous: "Imagem anterior",
       next: "Próxima imagem",
@@ -146,6 +148,12 @@ export const translations = {
           "Assinatura de plano com Stripe",
           "Painel administrativo da plataforma",
         ],
+        decisions: [
+          "Evoluiu de um app só para barbearias para uma plataforma genérica de negócios de beleza, sem reescrever o fluxo de agendamento.",
+          "Notificações de novos agendamentos para o profissional, para ele não depender de abrir o painel.",
+          "Assinatura de plano integrada ao Stripe, com a cobrança conectada ao acesso do estabelecimento.",
+          "Painel administrativo separado, com triagem do log de erros da plataforma.",
+        ],
         screenshots: {
           estabelecimento: "Página do estabelecimento com serviços e reserva",
           servicos: "Gestão de serviços no painel do profissional",
@@ -165,6 +173,12 @@ export const translations = {
           "Histórico e financeiro",
           "Vários estabelecimentos com dados isolados",
           "Assinatura com 7 dias grátis via Stripe",
+        ],
+        decisions: [
+          "Cada estabelecimento tem dados isolados, e o login usa o formato usuario@identificador para separar equipes de lugares diferentes.",
+          "As regras de fechamento de conta (desconto, taxa de serviço, divisão por pessoas) ficam em um módulo próprio, coberto por testes.",
+          "Toda escrita passa por Server Actions, e a permissão de cada papel (atendente ou dono) é checada no servidor, não só escondida na interface.",
+          "Assinatura no Stripe com 7 dias grátis; uma disputa de pagamento suspende o estabelecimento.",
         ],
         screenshots: {
           mesas: "Mapa de mesas com contas abertas",
@@ -298,6 +312,8 @@ export const translations = {
       viewSite: "View site",
       back: "Back to projects",
       features: "Features",
+      decisions: "Technical decisions",
+      nextProject: "Next project",
       stack: "Tech stack",
       previous: "Previous image",
       next: "Next image",
@@ -319,6 +335,12 @@ export const translations = {
           "Plan subscriptions with Stripe",
           "Platform admin panel",
         ],
+        decisions: [
+          "It grew from a barbershop-only app into a generic beauty-business platform without rewriting the booking flow.",
+          "Booking notifications for the professional, so they do not depend on opening the dashboard.",
+          "Plan subscription integrated with Stripe, with billing tied to the business access.",
+          "A separate admin panel, with triage of the platform error log.",
+        ],
         screenshots: {
           estabelecimento: "Business page with services and booking",
           servicos: "Service management in the professional dashboard",
@@ -339,6 +361,12 @@ export const translations = {
           "Multiple businesses with isolated data",
           "Subscription with a 7-day free trial via Stripe",
         ],
+        decisions: [
+          "Each business has isolated data, and login uses a username@identifier format to keep teams from different places apart.",
+          "Tab closing rules (discount, service charge, bill splitting) live in their own module, covered by tests.",
+          "Every write goes through Server Actions, and each role (staff or owner) is checked on the server, not just hidden in the UI.",
+          "Stripe subscription with a 7-day trial; a payment dispute suspends the business.",
+        ],
         screenshots: {
           mesas: "Table map with open tabs",
           pedido: "Order entry for a table",
@@ -356,6 +384,7 @@ export type ProjectText = {
   tagline: string;
   description: string;
   features: string[];
+  decisions: string[];
   screenshots: Record<string, string>;
 };
 
@@ -411,6 +440,8 @@ export type Translations = {
     viewSite: string;
     back: string;
     features: string;
+    decisions: string;
+    nextProject: string;
     stack: string;
     previous: string;
     next: string;

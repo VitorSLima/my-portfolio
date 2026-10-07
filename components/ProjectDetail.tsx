@@ -1,12 +1,12 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowLeft, ExternalLink } from "lucide-react";
+import { ArrowLeft, ArrowRight, ExternalLink } from "lucide-react";
 
 import Carousel from "./Carousel";
 import Container from "./Container";
 import TechTag from "./TechTag";
-import { getProject, screenshotSrc } from "@/lib/data";
+import { getProject, projects, screenshotSrc } from "@/lib/data";
 import { useLanguage } from "@/lib/LanguageContext";
 import type { ProjectSlug } from "@/lib/translations";
 
@@ -21,6 +21,7 @@ export default function ProjectDetail({ slug }: ProjectDetailProps) {
   if (!project) return null;
 
   const text = t.projects[slug];
+  const next = projects[(projects.findIndex((p) => p.slug === slug) + 1) % projects.length];
   const slides = project.screenshots.map((key) => ({
     src: screenshotSrc(slug, key),
     alt: text.screenshots[key],
@@ -70,6 +71,16 @@ export default function ProjectDetail({ slug }: ProjectDetailProps) {
         ))}
       </ul>
 
+      {/* Decisões técnicas */}
+      <h2 className="font-asap mb-4 mt-10 text-xl font-semibold" style={{ color: '#E2E4E9' }}>
+        {t.project.decisions}
+      </h2>
+      <ul className="font-maven list-disc space-y-2 pl-5 text-sm" style={{ color: '#878EA1' }}>
+        {text.decisions.map((decision) => (
+          <li key={decision}>{decision}</li>
+        ))}
+      </ul>
+
       {/* Tecnologias */}
       <h2 className="font-asap mb-4 mt-10 text-xl font-semibold" style={{ color: '#E2E4E9' }}>
         {t.project.stack}
@@ -91,6 +102,25 @@ export default function ProjectDetail({ slug }: ProjectDetailProps) {
         {t.project.viewSite}
         <ExternalLink size={16} />
       </a>
+
+      {/* Próximo projeto */}
+      {next.slug !== slug && (
+        <Link
+          href={`/projetos/${next.slug}`}
+          className="mt-16 flex items-center justify-between rounded-2xl border p-5 transition-all duration-300 hover:-translate-y-1 hover:!border-[#3996DB]"
+          style={{ backgroundColor: '#16181D', borderColor: '#292C34' }}
+        >
+          <span>
+            <span className="font-inconsolata block text-xs uppercase tracking-widest" style={{ color: '#878EA1' }}>
+              {t.project.nextProject}
+            </span>
+            <span className="font-asap text-lg font-semibold" style={{ color: '#E2E4E9' }}>
+              {t.projects[next.slug].title}
+            </span>
+          </span>
+          <ArrowRight size={20} style={{ color: '#3996DB' }} />
+        </Link>
+      )}
     </Container>
   );
 }
