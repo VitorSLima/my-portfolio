@@ -27,7 +27,13 @@ const mavenPro = Maven_Pro({
   display: "swap",
 });
 
+// Base das URLs absolutas (ex.: imagem de prévia). Na Vercel usa o domínio de produção.
+const siteUrl = process.env.VERCEL_PROJECT_PRODUCTION_URL
+  ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
+  : "http://localhost:3000";
+
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
   title: "Vitor Lima | Fullstack Developer",
   description:
     "Transformo necessidades em aplicações reais, envolventes e funcionais. Desenvolvo sistemas através da minha paixão pela tecnologia.",
@@ -45,6 +51,13 @@ export const metadata: Metadata = {
     description:
       "Transformo necessidades em aplicações reais, envolventes e funcionais.",
     type: "website",
+    siteName: "Vitor Lima",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Vitor Lima | Fullstack Developer",
+    description:
+      "Transformo necessidades em aplicações reais, envolventes e funcionais.",
   },
 };
 
