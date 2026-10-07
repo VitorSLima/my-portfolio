@@ -5,10 +5,12 @@ import { ChevronsDown, Download, FileText } from "lucide-react";
 
 import Container from "@/components/Container";
 import Header from "@/components/Header";
+import ExperienceItem from "@/components/ExperienceItem";
 import ProjectCard from "@/components/ProjectCard";
 import Section from "@/components/Section";
 import ServiceCard from "@/components/ServiceCard";
 import SocialButton from "@/components/SocialButton";
+import StatCard from "@/components/StatCard";
 import TechChip from "@/components/TechChip";
 import { cv, projects, socials, techs } from "@/lib/data";
 import { useLanguage } from "@/lib/LanguageContext";
@@ -151,9 +153,50 @@ export default function Home() {
         </Section>
 
         {/* ==========================================
+            SEÇÃO EXPERIÊNCIA
+            ========================================== */}
+        <Section id="experience" className="py-20" style={{ backgroundColor: '#16181D' }}>
+          <Container>
+            {/* Cabeçalho */}
+            <div className="mb-12 text-center">
+              <p className="font-inconsolata mb-2 text-sm uppercase tracking-widest" style={{ color: '#3996DB' }}>
+                {t.experience.label}
+              </p>
+              <h2 className="font-asap text-2xl font-bold sm:text-3xl" style={{ color: '#E2E4E9' }}>
+                {t.experience.title}
+              </h2>
+            </div>
+
+            {/* Números de destaque */}
+            <div className="mx-auto mb-14 grid max-w-4xl gap-4 sm:grid-cols-3">
+              {t.experience.stats.map((stat) => (
+                <StatCard key={stat.value} value={stat.value} label={stat.label} />
+              ))}
+            </div>
+
+            {/* Linha do tempo */}
+            <ol
+              className="mx-auto ml-2 max-w-3xl border-l sm:mx-auto"
+              style={{ borderColor: '#292C34' }}
+            >
+              {t.experience.items.map((item) => (
+                <ExperienceItem
+                  key={item.company}
+                  company={item.company}
+                  role={item.role}
+                  period={item.current ? `${item.period} – ${t.experience.present}` : item.period}
+                  current={item.current}
+                  bullets={item.bullets}
+                />
+              ))}
+            </ol>
+          </Container>
+        </Section>
+
+        {/* ==========================================
             SEÇÃO MEUS SERVIÇOS
             ========================================== */}
-        <Section id="services" className="py-20" style={{ backgroundColor: '#16181D' }}>
+        <Section id="services" className="py-20" style={{ backgroundColor: '#0D0E11' }}>
           <Container>
             {/* Cabeçalho */}
             <div className="mb-12 text-center">
