@@ -19,7 +19,7 @@ export const translations = {
       title: "Desenvolvedor Fullstack",
       available: "Disponível para novos projetos",
       description:
-        "Construo sistemas web completos, do front-end em React e Next.js à API e ao banco de dados, como o BeautyDesk e o Comandei, que estão no ar.",
+        "Sou de Três Lagoas, MS, com experiência em back-end e front-end e especialização em APIs RESTful. Já atuei com otimização de sistemas, integração de serviços e melhoria contínua, sempre focado em entregar soluções de qualidade que gerem resultados. Também fui professor de desenvolvimento web e hoje oriento agentes de IA no meu fluxo de trabalho.",
     },
     // Work
     work: {
@@ -154,7 +154,7 @@ export const translations = {
       title: "Fullstack Developer",
       available: "Available for new projects",
       description:
-        "I build complete web systems, from the React and Next.js front end to the API and the database, like BeautyDesk and Comandei, which are live.",
+        "I'm from Três Lagoas, Brazil, with experience in back-end and front-end development and a specialty in RESTful APIs. I have worked on system optimization, service integration and continuous improvement, always focused on delivering quality solutions that produce results. I was also a web development teacher, and today I direct AI agents in my workflow.",
     },
     // Work
     work: {
