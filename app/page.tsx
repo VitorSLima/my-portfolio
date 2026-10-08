@@ -25,7 +25,8 @@ const NAME = "Vitor dos Santos Lima";
 const serviceIcons = [Monitor, Database, Cloud];
 
 export default function Home() {
-  const { t } = useLanguage();
+  const { t, locale } = useLanguage();
+  const resume = cv[locale];
 
   return (
     <div className="relative min-h-screen" style={{ backgroundColor: '#0D0E11' }}>
@@ -108,8 +109,8 @@ export default function Home() {
 
             {/* Download do currículo */}
             <a
-              href={cv.href}
-              download={cv.fileName}
+              href={resume.href}
+              download={resume.fileName}
               className="font-maven animate-rise mb-12 inline-flex items-center gap-2 rounded-lg px-6 py-3 text-sm font-semibold transition-opacity hover:opacity-90"
               style={{ backgroundColor: '#3996DB', color: '#0D0E11', animationDelay: '480ms' }}
             >
@@ -260,9 +261,9 @@ export default function Home() {
               ))}
               <SocialButton
                 label={t.cv.download}
-                href={cv.href}
+                href={resume.href}
                 Icon={FileText}
-                download={cv.fileName}
+                download={resume.fileName}
               />
             </div>
           </Container>

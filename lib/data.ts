@@ -121,8 +121,14 @@ export const services: ServiceItem[] = [
 // Arquivo em /public/
 // ==========================================
 export const cv = {
-  href: "/Vitor_dos_Santos_Lima_CV.pdf",
-  fileName: "Vitor_dos_Santos_Lima_CV.pdf",
+  pt: {
+    href: "/Vitor_dos_Santos_Lima_CV.pdf",
+    fileName: "Vitor_dos_Santos_Lima_CV.pdf",
+  },
+  en: {
+    href: "/Vitor_dos_Santos_Lima_CV_EN.pdf",
+    fileName: "Vitor_dos_Santos_Lima_CV_EN.pdf",
+  },
 };
 
 // ==========================================
