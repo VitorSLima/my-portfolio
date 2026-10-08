@@ -43,6 +43,8 @@ export const techs: string[] = [
   "HTML",
   "CSS",
   "Node.js",
+  "Express",
+  "Fastify",
   "NestJS",
   "AdonisJS",
   "Prisma",

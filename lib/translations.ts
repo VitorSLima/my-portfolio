@@ -49,7 +49,7 @@ export const translations = {
         {
           title: "API e banco de dados",
           description:
-            "APIs com Node.js, NestJS e AdonisJS, bancos PostgreSQL, MySQL e MongoDB, cache com Redis e pagamentos com Stripe.",
+            "APIs com Node.js, Express, Fastify, NestJS e AdonisJS, bancos PostgreSQL, MySQL e MongoDB, cache com Redis e pagamentos com Stripe.",
         },
         {
           title: "DevOps",
@@ -184,7 +184,7 @@ export const translations = {
         {
           title: "API & Database",
           description:
-            "APIs with Node.js, NestJS and AdonisJS, PostgreSQL, MySQL and MongoDB databases, Redis caching and Stripe payments.",
+            "APIs with Node.js, Express, Fastify, NestJS and AdonisJS, PostgreSQL, MySQL and MongoDB databases, Redis caching and Stripe payments.",
         },
         {
           title: "DevOps",
