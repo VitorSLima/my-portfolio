@@ -33,7 +33,7 @@ export const translations = {
       stats: [
         { value: "3+", title: "anos de experiência", label: "Trabalhando com desenvolvimento web profissionalmente desde 05/2023." },
         { value: "−70%", title: "menos custo de infraestrutura", label: "Reduzi o gasto mensal do ambiente de testes de US$ 66 para US$ 19 ao achar a causa: logs acumulados sem limpeza." },
-        { value: "~400", title: "usuários em produção", label: "Evoluí e mantive um sistema com cerca de 400 usuários ativos, incluindo integração de pagamentos." },
+        { value: "IA", title: "orquestração de agentes no desenvolvimento", label: "Oriento agentes de IA (Claude Code) a implementar funcionalidades a partir de planos técnicos que eu especifico, com revisão de código e TDD." },
       ],
     },
     // Services
@@ -168,7 +168,7 @@ export const translations = {
       stats: [
         { value: "3+", title: "years of experience", label: "Working with web development professionally since 05/2023." },
         { value: "−70%", title: "lower infrastructure cost", label: "Cut the monthly cost of the testing environment from US$ 66 to US$ 19 by finding the cause: logs piling up with no cleanup." },
-        { value: "~400", title: "users in production", label: "Evolved and maintained a system with about 400 active users, including payment gateway integration." },
+        { value: "AI", title: "AI agent orchestration in development", label: "I direct AI agents (Claude Code) to implement features from technical plans that I specify, with code review and TDD." },
       ],
     },
     // Services
