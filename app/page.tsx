@@ -102,8 +102,8 @@ export default function Home() {
             </p>
 
             {/* Tech chips */}
-            <div className="animate-rise mb-12 w-full max-w-3xl" style={{ animationDelay: '400ms' }}>
-              <TechMarquee techs={techs} />
+            <div className="animate-rise mb-12 w-full max-w-4xl" style={{ animationDelay: '400ms' }}>
+              <TechMarquee techs={techs} size="lg" />
             </div>
 
             {/* Download do currículo */}
