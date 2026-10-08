@@ -29,63 +29,11 @@ export const translations = {
     // Experience
     experience: {
       label: "Experiência",
-      title: "Por onde já passei",
-      present: "atual",
+      title: "Experiência em números",
       stats: [
-        { value: "3+", label: "anos de experiência profissional" },
-        { value: "−70%", label: "no custo da infraestrutura de homologação" },
-        { value: "~400", label: "usuários ativos em um sistema que mantive" },
-      ],
-      items: [
-        {
-          company: "HeadTech Sistemas",
-          role: "Engenheiro de Software",
-          period: "06/2026",
-          current: true,
-          bullets: [
-            "Oriento agentes de IA (Claude Code) na implementação de funcionalidades a partir de planos técnicos que eu mesmo especifico, com revisão de código e Test-Driven Development.",
-            "Reduzi cerca de 70% do custo da infraestrutura de homologação (de US$ 66 para US$ 19 por mês) ao investigar a causa raiz: 98% do banco eram logs sem política de retenção. Automatizei a retenção em Python, dentro do pipeline de CI/CD.",
-          ],
-        },
-        {
-          company: "Instituto Federal do Mato Grosso do Sul",
-          role: "Professor Substituto de Desenvolvimento Web",
-          period: "07/2025 – 06/2026",
-          current: false,
-          bullets: [
-            "Aulas de HTML, CSS, JavaScript, TypeScript, React, PostgreSQL e NestJS para turmas do 1º ao 3º ano do ensino médio, até o desenvolvimento de aplicações full stack.",
-          ],
-        },
-        {
-          company: "4C Foresee",
-          role: "Desenvolvedor Full Stack (contrato)",
-          period: "08/2025 – 12/2025",
-          current: false,
-          bullets: [
-            "Plataforma SaaS de multiatendimento para WhatsApp: migrei o armazenamento de arquivos para o Amazon S3 e implementei cache com Redis antes do lançamento.",
-            "Referência técnica da equipe em escolhas de ferramentas e trade-offs de arquitetura, com as decisões documentadas.",
-          ],
-        },
-        {
-          company: "Zukt Labs",
-          role: "Desenvolvedor Back End",
-          period: "08/2024 – 07/2025",
-          current: false,
-          bullets: [
-            "NestJS, Prisma e PostgreSQL em uma plataforma com cerca de 100 usuários; assumi o deploy em produção e os pipelines de CI/CD.",
-            "Projetei o upload de arquivos com Cloudflare R2 e liderei uma refatoração baseada em Clean Architecture, reduzindo o acoplamento entre módulos.",
-          ],
-        },
-        {
-          company: "ArloesiTech",
-          role: "Desenvolvedor Full Stack",
-          period: "05/2023 – 08/2024",
-          current: false,
-          bullets: [
-            "Evoluí um sistema legado em Node.js e Express com cerca de 400 usuários ativos e integrei gateways de pagamento ao checkout.",
-            "Otimizei consultas MongoDB, criei APIs em NestJS com Prisma, PostgreSQL e Redis e contribuí para um ERP (NestJS e React).",
-          ],
-        },
+        { value: "3+", title: "anos de experiência", label: "Desenvolvendo sistemas web profissionalmente, do front-end ao deploy." },
+        { value: "−70%", title: "menos custo de infraestrutura", label: "Reduzi o gasto mensal do ambiente de testes de US$ 66 para US$ 19 ao achar a causa: logs acumulados sem limpeza." },
+        { value: "~400", title: "usuários em produção", label: "Evoluí e mantive um sistema com cerca de 400 usuários ativos, incluindo integração de pagamentos." },
       ],
     },
     // Services
@@ -216,63 +164,11 @@ export const translations = {
     // Experience
     experience: {
       label: "Experience",
-      title: "Where I've worked",
-      present: "present",
+      title: "Experience in numbers",
       stats: [
-        { value: "3+", label: "years of professional experience" },
-        { value: "−70%", label: "staging infrastructure cost" },
-        { value: "~400", label: "active users on a system I maintained" },
-      ],
-      items: [
-        {
-          company: "HeadTech Sistemas",
-          role: "Software Engineer",
-          period: "06/2026",
-          current: true,
-          bullets: [
-            "I direct AI agents (Claude Code) to implement features from technical plans that I specify myself, with code review and Test-Driven Development.",
-            "Cut staging infrastructure costs by about 70% (from US$ 66 to US$ 19 a month) by investigating the root cause: 98% of the database was logs with no retention policy. I automated retention in Python, inside the CI/CD pipeline.",
-          ],
-        },
-        {
-          company: "Instituto Federal do Mato Grosso do Sul",
-          role: "Substitute Professor, Web Development",
-          period: "07/2025 – 06/2026",
-          current: false,
-          bullets: [
-            "Taught HTML, CSS, JavaScript, TypeScript, React, PostgreSQL and NestJS to 1st through 3rd year high school classes, up to full stack application development.",
-          ],
-        },
-        {
-          company: "4C Foresee",
-          role: "Full Stack Developer (contract)",
-          period: "08/2025 – 12/2025",
-          current: false,
-          bullets: [
-            "WhatsApp multi-agent support SaaS platform: migrated file storage to Amazon S3 and added Redis caching before launch.",
-            "Team's technical reference for tooling choices and architecture trade-offs, with decisions documented.",
-          ],
-        },
-        {
-          company: "Zukt Labs",
-          role: "Back End Developer",
-          period: "08/2024 – 07/2025",
-          current: false,
-          bullets: [
-            "NestJS, Prisma and PostgreSQL on a platform with about 100 users; took ownership of production deploys and CI/CD pipelines.",
-            "Designed file uploads on Cloudflare R2 and led a Clean Architecture refactor that reduced coupling between modules.",
-          ],
-        },
-        {
-          company: "ArloesiTech",
-          role: "Full Stack Developer",
-          period: "05/2023 – 08/2024",
-          current: false,
-          bullets: [
-            "Evolved a legacy Node.js and Express system with about 400 active users and integrated payment gateways into checkout.",
-            "Optimized MongoDB queries, built NestJS APIs with Prisma, PostgreSQL and Redis, and contributed to an ERP (NestJS and React).",
-          ],
-        },
+        { value: "3+", title: "years of experience", label: "Building web systems professionally, from the front end to the deploy." },
+        { value: "−70%", title: "lower infrastructure cost", label: "Cut the monthly cost of the testing environment from US$ 66 to US$ 19 by finding the cause: logs piling up with no cleanup." },
+        { value: "~400", title: "users in production", label: "Evolved and maintained a system with about 400 active users, including payment gateway integration." },
       ],
     },
     // Services
@@ -410,15 +306,7 @@ export type Translations = {
   experience: {
     label: string;
     title: string;
-    present: string;
-    stats: Array<{ value: string; label: string }>;
-    items: Array<{
-      company: string;
-      role: string;
-      period: string;
-      current: boolean;
-      bullets: string[];
-    }>;
+    stats: Array<{ value: string; title: string; label: string }>;
   };
   services: {
     label: string;

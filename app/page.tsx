@@ -5,7 +5,6 @@ import { ChevronsDown, Download, FileText } from "lucide-react";
 
 import Container from "@/components/Container";
 import Header from "@/components/Header";
-import ExperienceItem from "@/components/ExperienceItem";
 import ProjectCard from "@/components/ProjectCard";
 import Reveal from "@/components/Reveal";
 import Section from "@/components/Section";
@@ -182,30 +181,13 @@ export default function Home() {
             </Reveal>
 
             {/* Números de destaque */}
-            <div className="mx-auto mb-14 grid max-w-4xl gap-4 sm:grid-cols-3">
+            <div className="mx-auto grid max-w-4xl gap-4 sm:grid-cols-3">
               {t.experience.stats.map((stat, index) => (
-                <Reveal key={stat.value} delay={index * 100}>
-                  <StatCard value={stat.value} label={stat.label} />
+                <Reveal key={stat.value} delay={index * 100} className="h-full">
+                  <StatCard value={stat.value} title={stat.title} label={stat.label} />
                 </Reveal>
               ))}
             </div>
-
-            {/* Linha do tempo */}
-            <ol
-              className="mx-auto ml-2 max-w-3xl border-l sm:mx-auto"
-              style={{ borderColor: '#292C34' }}
-            >
-              {t.experience.items.map((item) => (
-                <ExperienceItem
-                  key={item.company}
-                  company={item.company}
-                  role={item.role}
-                  period={item.current ? `${item.period} – ${t.experience.present}` : item.period}
-                  current={item.current}
-                  bullets={item.bullets}
-                />
-              ))}
-            </ol>
           </Container>
         </Section>
 

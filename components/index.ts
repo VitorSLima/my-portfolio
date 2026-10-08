@@ -10,6 +10,5 @@ export { default as Carousel } from "./Carousel";
 export { default as ProjectDetail } from "./ProjectDetail";
 export { default as TechMarquee } from "./TechMarquee";
 export { default as StatCard } from "./StatCard";
-export { default as ExperienceItem } from "./ExperienceItem";
 export { default as Lightbox } from "./Lightbox";
 export { default as Reveal } from "./Reveal";
