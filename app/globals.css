@@ -220,7 +220,8 @@ body {
   animation-play-state: paused;
 }
 
-/* Sem movimento: mostra uma única cópia, quebrando em linhas */
+/* Sem movimento: mostra uma única cópia, centralizada e quebrando em linhas.
+   !important porque as utilitárias do Tailwind (flex, gap, pr) têm a mesma força. */
 @media (prefers-reduced-motion: reduce) {
   .marquee {
     -webkit-mask-image: none;
@@ -229,16 +230,18 @@ body {
 
   .marquee-track {
     animation: none;
-    width: auto;
+    width: 100%;
   }
 
   .marquee-copy {
     flex-shrink: 1;
     flex-wrap: wrap;
+    justify-content: center;
+    padding-right: 0 !important;
   }
 
   .marquee-copy[aria-hidden="true"] {
-    display: none;
+    display: none !important;
   }
 }
 
