@@ -2,7 +2,7 @@ import { readFile } from "node:fs/promises";
 import { join } from "node:path";
 import { ImageResponse } from "next/og";
 
-export const alt = "Vitor Lima | Fullstack Developer";
+export const alt = "Vitor Lima | Engenheiro de Software";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -80,7 +80,7 @@ export default async function OpengraphImage() {
                 marginTop: 12,
               }}
             >
-              Fullstack Developer
+              Software Engineer
             </div>
             <div
               style={{

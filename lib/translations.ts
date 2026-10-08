@@ -12,11 +12,18 @@ export const translations = {
       services: "Serviços",
       contact: "Contato",
     },
+    // Metadados da página (título e descrição da aba)
+    meta: {
+      title: "Vitor Lima | Engenheiro de Software",
+      description:
+        "Engenheiro de Software com experiência em back-end e front-end e especialização em APIs RESTful.",
+    },
     // Hero
     hero: {
       greeting: "Hello World! Meu nome é",
       role: "e sou",
-      title: "Desenvolvedor Fullstack",
+      title: "Engenheiro de Software",
+      scrollLabel: "Rolar para os projetos",
       available: "Disponível para novos projetos",
       description:
         "Sou de Três Lagoas, MS, com experiência em back-end e front-end e especialização em APIs RESTful. Já atuei com otimização de sistemas, integração de serviços e melhoria contínua, sempre focado em entregar soluções de qualidade que gerem resultados. Também fui professor de desenvolvimento web e hoje oriento agentes de IA no meu fluxo de trabalho.",
@@ -147,11 +154,18 @@ export const translations = {
       services: "Services",
       contact: "Contact",
     },
+    // Page metadata (tab title and description)
+    meta: {
+      title: "Vitor Lima | Software Engineer",
+      description:
+        "Software Engineer with experience in back-end and front-end development and a specialty in RESTful APIs.",
+    },
     // Hero
     hero: {
       greeting: "Hello World! My name is",
       role: "and I'm a",
-      title: "Fullstack Developer",
+      title: "Software Engineer",
+      scrollLabel: "Scroll to projects",
       available: "Available for new projects",
       description:
         "I'm from Três Lagoas, Brazil, with experience in back-end and front-end development and a specialty in RESTful APIs. I have worked on system optimization, service integration and continuous improvement, always focused on delivering quality solutions that produce results. I was also a web development teacher, and today I direct AI agents in my workflow.",
@@ -292,10 +306,15 @@ export type Translations = {
     services: string;
     contact: string;
   };
+  meta: {
+    title: string;
+    description: string;
+  };
   hero: {
     greeting: string;
     role: string;
     title: string;
+    scrollLabel: string;
     available: string;
     description: string;
   };

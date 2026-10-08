@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect } from "react";
 import Link from "next/link";
 import { ArrowLeft, ArrowRight, ExternalLink } from "lucide-react";
 
@@ -17,6 +18,12 @@ type ProjectDetailProps = {
 export default function ProjectDetail({ slug }: ProjectDetailProps) {
   const { t } = useLanguage();
   const project = getProject(slug);
+  const description = t.projects[slug].description;
+
+  // Descrição da aba no idioma escolhido
+  useEffect(() => {
+    document.querySelector('meta[name="description"]')?.setAttribute("content", description);
+  }, [description]);
 
   if (!project) return null;
 

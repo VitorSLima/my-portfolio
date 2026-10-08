@@ -34,11 +34,12 @@ const siteUrl = process.env.VERCEL_PROJECT_PRODUCTION_URL
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: "Vitor Lima | Fullstack Developer",
+  title: "Vitor Lima | Engenheiro de Software",
   description:
-    "Transformo necessidades em aplicações reais, envolventes e funcionais. Desenvolvo sistemas através da minha paixão pela tecnologia.",
+    "Engenheiro de Software com experiência em back-end e front-end e especialização em APIs RESTful.",
   keywords: [
-    "desenvolvedor",
+    "engenheiro de software",
+    "software engineer",
     "fullstack",
     "react",
     "node.js",
@@ -47,17 +48,17 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Vitor Lima" }],
   openGraph: {
-    title: "Vitor Lima | Fullstack Developer",
+    title: "Vitor Lima | Engenheiro de Software",
     description:
-      "Transformo necessidades em aplicações reais, envolventes e funcionais.",
+      "Engenheiro de Software com experiência em back-end e front-end e especialização em APIs RESTful.",
     type: "website",
     siteName: "Vitor Lima",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Vitor Lima | Fullstack Developer",
+    title: "Vitor Lima | Engenheiro de Software",
     description:
-      "Transformo necessidades em aplicações reais, envolventes e funcionais.",
+      "Engenheiro de Software com experiência em back-end e front-end e especialização em APIs RESTful.",
   },
 };
 

@@ -122,7 +122,7 @@ export default function Home() {
               href="#work"
               className="animate-bounce transition-colors hover:opacity-80"
               style={{ color: '#878EA1' }}
-              aria-label="Scroll para projetos"
+              aria-label={t.hero.scrollLabel}
             >
               <ChevronsDown size={32} />
             </a>
