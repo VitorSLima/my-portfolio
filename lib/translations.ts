@@ -19,7 +19,7 @@ export const translations = {
       title: "Desenvolvedor Fullstack",
       available: "Disponível para novos projetos",
       description:
-        "Construo produtos web completos, do front-end em React e Next.js à API, ao banco de dados e ao deploy. Transformo uma necessidade de negócio em um sistema no ar, como o BeautyDesk e o Comandei, que estão em produção.",
+        "Construo sistemas web completos, do front-end em React e Next.js à API e ao banco de dados, como o BeautyDesk e o Comandei, que estão no ar.",
     },
     // Work
     work: {
@@ -31,7 +31,7 @@ export const translations = {
       label: "Experiência",
       title: "Experiência em números",
       stats: [
-        { value: "3+", title: "anos de experiência", label: "Desenvolvendo sistemas web profissionalmente, do front-end ao deploy." },
+        { value: "3+", title: "anos de experiência", label: "Trabalhando com desenvolvimento web profissionalmente desde 05/2023." },
         { value: "−70%", title: "menos custo de infraestrutura", label: "Reduzi o gasto mensal do ambiente de testes de US$ 66 para US$ 19 ao achar a causa: logs acumulados sem limpeza." },
         { value: "~400", title: "usuários em produção", label: "Evoluí e mantive um sistema com cerca de 400 usuários ativos, incluindo integração de pagamentos." },
       ],
@@ -44,17 +44,17 @@ export const translations = {
         {
           title: "Websites e Aplicativos",
           description:
-            "Interfaces rápidas e responsivas com React e Next.js, de landing pages a painéis completos, com atenção a acessibilidade e SEO.",
+            "Interfaces web com React e Next.js, como as do BeautyDesk e do Comandei.",
         },
         {
           title: "API e banco de dados",
           description:
-            "APIs com Node.js e NestJS, modelagem em PostgreSQL e MongoDB, cache com Redis e integrações como pagamentos com Stripe.",
+            "APIs com Node.js, NestJS e AdonisJS, bancos PostgreSQL, MySQL e MongoDB, cache com Redis e pagamentos com Stripe.",
         },
         {
           title: "DevOps",
           description:
-            "Pipelines de CI/CD, containers com Docker, deploy na AWS e armazenamento em Cloudflare R2, com foco em custo e estabilidade.",
+            "Pipelines de CI/CD, containers com Docker e armazenamento de arquivos no Amazon S3 e no Cloudflare R2.",
         },
       ],
     },
@@ -97,10 +97,10 @@ export const translations = {
           "Painel administrativo da plataforma",
         ],
         decisions: [
-          "Evoluiu de um app só para barbearias para uma plataforma genérica de negócios de beleza, sem reescrever o fluxo de agendamento.",
-          "Notificações de novos agendamentos para o profissional, para ele não depender de abrir o painel.",
-          "Assinatura de plano integrada ao Stripe, com a cobrança conectada ao acesso do estabelecimento.",
-          "Painel administrativo separado, com triagem do log de erros da plataforma.",
+          "Deixou de ser exclusivo para barbearias e passou a atender qualquer negócio de beleza.",
+          "Notificações de agendamento.",
+          "Assinatura de plano integrada ao Stripe.",
+          "Painel administrativo da plataforma, com triagem do log de erros.",
         ],
         screenshots: {
           estabelecimento: "Página do estabelecimento com serviços e reserva",
@@ -123,7 +123,7 @@ export const translations = {
           "Assinatura com 7 dias grátis via Stripe",
         ],
         decisions: [
-          "Cada estabelecimento tem dados isolados, e o login usa o formato usuario@identificador para separar equipes de lugares diferentes.",
+          "Cada estabelecimento tem dados isolados; o login usa o formato usuario@identificador.",
           "As regras de fechamento de conta (desconto, taxa de serviço, divisão por pessoas) ficam em um módulo próprio, coberto por testes.",
           "Toda escrita passa por Server Actions, e a permissão de cada papel (atendente ou dono) é checada no servidor, não só escondida na interface.",
           "Assinatura no Stripe com 7 dias grátis; uma disputa de pagamento suspende o estabelecimento.",
@@ -154,7 +154,7 @@ export const translations = {
       title: "Fullstack Developer",
       available: "Available for new projects",
       description:
-        "I build complete web products, from the React and Next.js front end to the API, the database and the deploy. I turn a business need into a live system, like BeautyDesk and Comandei, both in production.",
+        "I build complete web systems, from the React and Next.js front end to the API and the database, like BeautyDesk and Comandei, which are live.",
     },
     // Work
     work: {
@@ -166,7 +166,7 @@ export const translations = {
       label: "Experience",
       title: "Experience in numbers",
       stats: [
-        { value: "3+", title: "years of experience", label: "Building web systems professionally, from the front end to the deploy." },
+        { value: "3+", title: "years of experience", label: "Working with web development professionally since 05/2023." },
         { value: "−70%", title: "lower infrastructure cost", label: "Cut the monthly cost of the testing environment from US$ 66 to US$ 19 by finding the cause: logs piling up with no cleanup." },
         { value: "~400", title: "users in production", label: "Evolved and maintained a system with about 400 active users, including payment gateway integration." },
       ],
@@ -179,17 +179,17 @@ export const translations = {
         {
           title: "Websites & Apps",
           description:
-            "Fast, responsive interfaces with React and Next.js, from landing pages to full dashboards, with attention to accessibility and SEO.",
+            "Web interfaces with React and Next.js, like those of BeautyDesk and Comandei.",
         },
         {
           title: "API & Database",
           description:
-            "APIs with Node.js and NestJS, PostgreSQL and MongoDB modeling, Redis caching and integrations such as Stripe payments.",
+            "APIs with Node.js, NestJS and AdonisJS, PostgreSQL, MySQL and MongoDB databases, Redis caching and Stripe payments.",
         },
         {
           title: "DevOps",
           description:
-            "CI/CD pipelines, Docker containers, AWS deploys and Cloudflare R2 storage, with a focus on cost and stability.",
+            "CI/CD pipelines, Docker containers and file storage on Amazon S3 and Cloudflare R2.",
         },
       ],
     },
@@ -232,10 +232,10 @@ export const translations = {
           "Platform admin panel",
         ],
         decisions: [
-          "It grew from a barbershop-only app into a generic beauty-business platform without rewriting the booking flow.",
-          "Booking notifications for the professional, so they do not depend on opening the dashboard.",
-          "Plan subscription integrated with Stripe, with billing tied to the business access.",
-          "A separate admin panel, with triage of the platform error log.",
+          "It stopped being barbershop-only and now serves any beauty business.",
+          "Booking notifications.",
+          "Plan subscription integrated with Stripe.",
+          "Platform admin panel, with triage of the error log.",
         ],
         screenshots: {
           estabelecimento: "Business page with services and booking",
@@ -258,7 +258,7 @@ export const translations = {
           "Subscription with a 7-day free trial via Stripe",
         ],
         decisions: [
-          "Each business has isolated data, and login uses a username@identifier format to keep teams from different places apart.",
+          "Each business has isolated data; login uses a username@identifier format.",
           "Tab closing rules (discount, service charge, bill splitting) live in their own module, covered by tests.",
           "Every write goes through Server Actions, and each role (staff or owner) is checked on the server, not just hidden in the UI.",
           "Stripe subscription with a 7-day trial; a payment dispute suspends the business.",
