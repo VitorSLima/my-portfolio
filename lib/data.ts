@@ -9,11 +9,6 @@ import {
 } from "lucide-react";
 import type { ProjectSlug } from "./translations";
 
-type TechItem = {
-  label: string;
-  image: string;
-};
-
 type ScreenshotKey = string;
 
 type ProjectItem = {
@@ -40,13 +35,32 @@ type SocialItem = {
 // TECNOLOGIAS (chips do hero)
 // Usando imagens da pasta /public/
 // ==========================================
-export const techs: TechItem[] = [
-  { label: "Node.js", image: "/node.png" },
-  { label: "React", image: "/react.png" },
-  { label: "TypeScript", image: "/typescript.png" },
-  { label: "PostgreSQL", image: "/postgresql.png" },
-  { label: "MongoDB", image: "/mongodb.png" },
-  { label: "Docker", image: "/docker.png" },
+export const techs: string[] = [
+  "React",
+  "Next.js",
+  "TypeScript",
+  "JavaScript",
+  "HTML",
+  "CSS",
+  "Node.js",
+  "NestJS",
+  "AdonisJS",
+  "Prisma",
+  "Drizzle",
+  "Swagger",
+  "PostgreSQL",
+  "MySQL",
+  "MongoDB",
+  "Redis",
+  "Supabase",
+  "Docker",
+  "AWS",
+  "Cloudflare",
+  "GitHub Actions",
+  "Git",
+  "GitHub",
+  "Python",
+  "Stripe",
 ];
 
 // ==========================================

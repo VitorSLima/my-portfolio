@@ -11,7 +11,7 @@ import Section from "@/components/Section";
 import ServiceCard from "@/components/ServiceCard";
 import SocialButton from "@/components/SocialButton";
 import StatCard from "@/components/StatCard";
-import TechChip from "@/components/TechChip";
+import TechMarquee from "@/components/TechMarquee";
 import { cv, projects, socials, techs } from "@/lib/data";
 import { useLanguage } from "@/lib/LanguageContext";
 import { Monitor, Database, Cloud } from "lucide-react";
@@ -102,10 +102,8 @@ export default function Home() {
             </p>
 
             {/* Tech chips */}
-            <div className="animate-rise mb-12 flex flex-wrap justify-center gap-3" style={{ animationDelay: '400ms' }}>
-              {techs.map((tech) => (
-                <TechChip key={tech.label} label={tech.label} image={tech.image} />
-              ))}
+            <div className="animate-rise mb-12 w-full max-w-3xl" style={{ animationDelay: '400ms' }}>
+              <TechMarquee techs={techs} />
             </div>
 
             {/* Download do currículo */}
