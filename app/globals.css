@@ -220,24 +220,20 @@ body {
   animation-play-state: paused;
 }
 
-/* Sem movimento: mostra uma única cópia, centralizada e quebrando em linhas.
-   !important porque as utilitárias do Tailwind (flex, gap, pr) têm a mesma força. */
+/* Sem movimento automático (preferência do sistema): a faixa vira um carrossel
+   que se arrasta com o dedo ou o mouse, com uma única cópia. */
 @media (prefers-reduced-motion: reduce) {
   .marquee {
-    -webkit-mask-image: none;
-    mask-image: none;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .marquee::-webkit-scrollbar {
+    display: none;
   }
 
   .marquee-track {
     animation: none;
-    width: 100%;
-  }
-
-  .marquee-copy {
-    flex-shrink: 1;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding-right: 0 !important;
   }
 
   .marquee-copy[aria-hidden="true"] {
