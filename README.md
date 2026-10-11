@@ -1,6 +1,6 @@
-# Vitor Lima | Fullstack Developer Portfolio
+# Vitor Lima | Software Engineer Portfolio
 
-A modern, responsive portfolio website built to showcase my skills and projects as a Fullstack Developer seeking international opportunities.
+A modern, responsive portfolio website built to showcase my skills and projects as a Software Engineer seeking international opportunities.
 
 ## About
 
@@ -8,7 +8,7 @@ This portfolio serves as my professional showcase, highlighting personal project
 
 ## Tech Stack
 
-- **Framework:** Next.js 15 (App Router)
+- **Framework:** Next.js 16 (App Router)
 - **Language:** TypeScript
 - **Styling:** TailwindCSS 4 + DaisyUI 5
 - **Icons:** Lucide React
@@ -27,6 +27,7 @@ This portfolio serves as my professional showcase, highlighting personal project
 
 - **Home:** Introduction and tech stack
 - **Work:** Featured projects showcase
+- **Experience:** Career milestones and impact metrics
 - **Services:** Professional services offered
 - **Contact:** Social links and contact information
 
@@ -53,9 +54,9 @@ Open [http://localhost:3000](http://localhost:3000) to view the portfolio.
 
 ---
 
-# Vitor Lima | Portfólio Desenvolvedor Fullstack
+# Vitor Lima | Portfólio Engenheiro de Software
 
-Um site de portfólio moderno e responsivo construído para exibir minhas habilidades e projetos como Desenvolvedor Fullstack buscando oportunidades internacionais.
+Um site de portfólio moderno e responsivo construído para exibir minhas habilidades e projetos como Engenheiro de Software buscando oportunidades internacionais.
 
 ## Sobre
 
@@ -63,7 +64,7 @@ Este portfólio serve como minha vitrine profissional, destacando projetos pesso
 
 ## Stack Tecnológica
 
-- **Framework:** Next.js 15 (App Router)
+- **Framework:** Next.js 16 (App Router)
 - **Linguagem:** TypeScript
 - **Estilização:** TailwindCSS 4 + DaisyUI 5
 - **Ícones:** Lucide React
@@ -82,6 +83,7 @@ Este portfólio serve como minha vitrine profissional, destacando projetos pesso
 
 - **Home:** Introdução e stack tecnológica
 - **Trabalho:** Vitrine de projetos em destaque
+- **Experiência:** Marcos de carreira e métricas de impacto
 - **Serviços:** Serviços profissionais oferecidos
 - **Contato:** Links sociais e informações de contato
 
