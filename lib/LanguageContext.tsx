@@ -20,6 +20,7 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
     // Idioma salvo no localStorage; sem preferência salva, segue o do navegador
     const saved = localStorage.getItem("locale") as Locale | null;
     if (saved && (saved === "pt" || saved === "en")) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setLocaleState(saved);
     } else if (navigator.language.toLowerCase().startsWith("pt")) {
       setLocaleState("pt");

@@ -41,7 +41,7 @@ export default function SocialButton({
       ) : (
         <ArrowUpRight
           size={18}
-          className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 hover:!border-[#3996DB] hover:!bg-[rgba(57,150,219,0.1)]"
+          className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
           style={{ color: '#3996DB' }}
         />
       )}
