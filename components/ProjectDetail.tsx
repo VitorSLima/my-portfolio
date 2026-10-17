@@ -2,7 +2,7 @@
 
 import { useEffect } from "react";
 import Link from "next/link";
-import { ArrowLeft, ArrowRight, ExternalLink } from "lucide-react";
+import { ArrowLeft, ArrowRight, ExternalLink, Github } from "lucide-react";
 
 import Carousel from "./Carousel";
 import Container from "./Container";
@@ -98,17 +98,31 @@ export default function ProjectDetail({ slug }: ProjectDetailProps) {
         ))}
       </div>
 
-      {/* Link do site */}
-      <a
-        href={project.url}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="mt-10 inline-flex items-center gap-2 rounded-lg px-5 py-3 text-sm font-semibold transition-opacity hover:opacity-90"
-        style={{ backgroundColor: '#3996DB', color: '#0D0E11' }}
-      >
-        {t.project.viewSite}
-        <ExternalLink size={16} />
-      </a>
+      {/* Links do projeto */}
+      <div className="mt-10 flex flex-wrap gap-3">
+        <a
+          href={project.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 rounded-lg px-5 py-3 text-sm font-semibold transition-opacity hover:opacity-90"
+          style={{ backgroundColor: '#3996DB', color: '#0D0E11' }}
+        >
+          {t.project.viewSite}
+          <ExternalLink size={16} />
+        </a>
+        {project.repo && (
+          <a
+            href={project.repo}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 rounded-lg border px-5 py-3 text-sm font-semibold transition-opacity hover:opacity-80"
+            style={{ borderColor: '#3996DB', color: '#3996DB' }}
+          >
+            {t.project.viewRepo}
+            <Github size={16} />
+          </a>
+        )}
+      </div>
 
       {/* Próximo projeto */}
       {next.slug !== slug && (

@@ -1,6 +1,6 @@
 export type Locale = "pt" | "en";
 
-export type ProjectSlug = "beautydesk" | "comandei";
+export type ProjectSlug = "beautydesk" | "comandei" | "torcida-veste";
 
 export const translations = {
   pt: {
@@ -78,6 +78,12 @@ export const translations = {
     // Rótulos da página e do card de projeto
     project: {
       viewSite: "Ver site",
+      viewRepo: "Ver código",
+      viewDetails: "Ver detalhes",
+      statusOpen: "Projeto pessoal · código aberto",
+      statusPrivate: "Produto SaaS · código privado",
+      previousProject: "Projeto anterior",
+      nextProjectArrow: "Próximo projeto",
       back: "Voltar aos projetos",
       features: "Funcionalidades",
       decisions: "Decisões técnicas",
@@ -141,6 +147,33 @@ export const translations = {
           fechamento: "Fechamento de conta",
           cardapio: "Gestão do cardápio",
           financeiro: "Resumo financeiro",
+        },
+      },
+      "torcida-veste": {
+        title: "Torcida Veste",
+        tagline: "Loja virtual de artigos esportivos",
+        description:
+          "Loja online de camisetas, conjuntos e meias esportivas, projeto pessoal com front-end em Next.js e API própria em NestJS. O cliente navega pelo catálogo e pelas ofertas, monta o carrinho com cupom de desconto e paga pelo Stripe Checkout (modo de teste); depois acompanha os pedidos na própria conta.",
+        features: [
+          "Catálogo com busca, categorias, ligas e página de ofertas com desconto em %",
+          "Página de produto com galeria, estoque e avaliações",
+          "Carrinho com cupom de desconto e cálculo de frete",
+          "Login com e-mail e senha ou conta Google",
+          "Pagamento com Stripe Checkout e confirmação por webhook",
+          "Página Meus pedidos com o status de cada compra",
+        ],
+        decisions: [
+          "O carrinho fica no navegador e o login só é exigido ao finalizar a compra.",
+          "A API recalcula preços, estoque, cupom e frete a partir do banco; o valor enviado pelo front nunca é confiado.",
+          "As regras de preço (centavos, cupom e frete) ficam em funções puras, cobertas por testes.",
+          "O webhook do Stripe valida a assinatura e é idempotente: reprocessar o mesmo evento não altera o pedido.",
+          "Permissões por papel (usuário ou admin) aplicadas na API, e o login com Google troca um código de uso único por tokens, sem expô-los na URL.",
+        ],
+        screenshots: {
+          inicio: "Página inicial com ofertas",
+          catalogo: "Catálogo de produtos por categoria",
+          produto: "Página de produto com preço promocional",
+          carrinho: "Carrinho com cupom, frete e total",
         },
       },
     },
@@ -220,6 +253,12 @@ export const translations = {
     // Project page and card labels
     project: {
       viewSite: "View site",
+      viewRepo: "View code",
+      viewDetails: "View details",
+      statusOpen: "Personal project · open source",
+      statusPrivate: "SaaS product · private code",
+      previousProject: "Previous project",
+      nextProjectArrow: "Next project",
       back: "Back to projects",
       features: "Features",
       decisions: "Technical decisions",
@@ -285,6 +324,33 @@ export const translations = {
           financeiro: "Revenue summary",
         },
       },
+      "torcida-veste": {
+        title: "Torcida Veste",
+        tagline: "Online store for sports apparel",
+        description:
+          "An online store for jerseys, sets and sports socks, a personal project with a Next.js front end and its own NestJS API. Customers browse the catalog and deals, build a cart with a discount coupon and pay through Stripe Checkout (test mode), then follow their orders from their account.",
+        features: [
+          "Catalog with search, categories, leagues and a deals page with % discounts",
+          "Product page with gallery, stock status and ratings",
+          "Cart with discount coupon and shipping calculation",
+          "Login with email and password or a Google account",
+          "Payment with Stripe Checkout and webhook confirmation",
+          "My orders page with the status of each purchase",
+        ],
+        decisions: [
+          "The cart lives in the browser and login is only required at checkout.",
+          "The API recalculates prices, stock, coupon and shipping from the database; the amount sent by the front end is never trusted.",
+          "Pricing rules (cents, coupon and shipping) live in pure functions, covered by tests.",
+          "The Stripe webhook verifies the signature and is idempotent: reprocessing the same event does not change the order.",
+          "Role-based permissions (user or admin) enforced in the API, and Google login swaps a one-time code for tokens, never exposing them in the URL.",
+        ],
+        screenshots: {
+          inicio: "Home page with deals",
+          catalogo: "Product catalog by category",
+          produto: "Product page with sale price",
+          carrinho: "Cart with coupon, shipping and total",
+        },
+      },
     },
   },
 };
@@ -345,6 +411,12 @@ export type Translations = {
   };
   project: {
     viewSite: string;
+    viewRepo: string;
+    viewDetails: string;
+    statusOpen: string;
+    statusPrivate: string;
+    previousProject: string;
+    nextProjectArrow: string;
     back: string;
     features: string;
     decisions: string;

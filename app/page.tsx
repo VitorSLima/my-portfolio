@@ -5,14 +5,14 @@ import { ChevronsDown, Download, FileText } from "lucide-react";
 
 import Container from "@/components/Container";
 import Header from "@/components/Header";
-import ProjectCard from "@/components/ProjectCard";
+import ProjectShowcase from "@/components/ProjectShowcase";
 import Reveal from "@/components/Reveal";
 import Section from "@/components/Section";
 import ServiceCard from "@/components/ServiceCard";
 import SocialButton from "@/components/SocialButton";
 import StatCard from "@/components/StatCard";
 import TechMarquee from "@/components/TechMarquee";
-import { cv, projects, socials, techs } from "@/lib/data";
+import { cv, socials, techs } from "@/lib/data";
 import { useLanguage } from "@/lib/LanguageContext";
 import { Monitor, Database, Cloud } from "lucide-react";
 
@@ -146,21 +146,9 @@ export default function Home() {
             </Reveal>
 
             {/* Grid de projetos */}
-            <div className="mx-auto grid max-w-4xl gap-6 sm:grid-cols-2">
-              {projects.map((project, index) => (
-                <Reveal key={project.slug} delay={index * 100}>
-                <ProjectCard
-                  slug={project.slug}
-                  title={t.projects[project.slug].title}
-                  tagline={t.projects[project.slug].tagline}
-                  cover={project.cover}
-                  url={project.url}
-                  techs={project.techs}
-                  viewSiteLabel={t.project.viewSite}
-                />
-                </Reveal>
-              ))}
-            </div>
+            <Reveal className="mx-auto max-w-5xl">
+              <ProjectShowcase />
+            </Reveal>
           </Container>
         </Section>
 

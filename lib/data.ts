@@ -15,6 +15,7 @@ type ProjectItem = {
   slug: ProjectSlug;
   cover: string;
   url: string;
+  repo?: string;
   techs: string[];
   screenshots: ScreenshotKey[];
 };
@@ -84,6 +85,14 @@ export const projects: ProjectItem[] = [
     url: "https://comandei.vercel.app",
     techs: ["Next.js", "TypeScript", "Drizzle", "PostgreSQL", "Stripe"],
     screenshots: ["mesas", "pedido", "fechamento", "cardapio", "financeiro"],
+  },
+  {
+    slug: "torcida-veste",
+    cover: "/projects/torcida-veste/cover.png",
+    url: "https://torcida-veste-app.vercel.app",
+    repo: "https://github.com/VitorSLima/torcida-veste",
+    techs: ["Next.js", "TypeScript", "NestJS", "Prisma", "PostgreSQL", "Stripe"],
+    screenshots: ["inicio", "catalogo", "produto", "carrinho"],
   },
 ];
 
