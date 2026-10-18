@@ -28,7 +28,7 @@ export default function ServiceCard({
           color: '#3996DB'
         }}
       >
-        <Icon size={22} />
+        <Icon size={22} aria-hidden="true" />
       </div>
 
       {/* Título */}

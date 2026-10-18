@@ -29,18 +29,20 @@ export default function SocialButton({
       }}
     >
       <span className="flex items-center gap-3">
-        <Icon size={20} style={{ color: '#3996DB' }} />
+        <Icon size={20} style={{ color: '#3996DB' }} aria-hidden="true" />
         <span className="font-medium">{label}</span>
       </span>
       {download ? (
         <Download
           size={18}
+          aria-hidden="true"
           className="transition-transform group-hover:translate-y-0.5"
           style={{ color: '#3996DB' }}
         />
       ) : (
         <ArrowUpRight
           size={18}
+          aria-hidden="true"
           className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
           style={{ color: '#3996DB' }}
         />

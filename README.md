@@ -18,7 +18,9 @@ This portfolio serves as my professional showcase, highlighting personal project
 
 - Responsive design optimized for all devices
 - Dark theme with modern UI/UX
-- Bilingual support (English/Portuguese) with language switcher
+- Bilingual support (English/Portuguese) with accessible language switcher
+- Interactive project showcase with tabbed carousel and preview frames
+- Accessible UI components with semantic markup and ARIA enhancements
 - Smooth scroll navigation
 - Optimized images with Next.js Image component
 - Clean component architecture
@@ -74,7 +76,9 @@ Este portfólio serve como minha vitrine profissional, destacando projetos pesso
 
 - Design responsivo otimizado para todos os dispositivos
 - Tema escuro com UI/UX moderna
-- Suporte bilíngue (Inglês/Português) com seletor de idioma
+- Suporte bilíngue (Inglês/Português) com seletor de idioma acessível
+- Vitrine interativa de projetos com carrossel em abas e molduras de preview
+- Componentes acessíveis com marcação semântica e aprimoramentos ARIA
 - Navegação com scroll suave
 - Imagens otimizadas com componente Next.js Image
 - Arquitetura de componentes limpa

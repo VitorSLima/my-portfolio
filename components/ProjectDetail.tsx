@@ -42,7 +42,7 @@ export default function ProjectDetail({ slug }: ProjectDetailProps) {
         className="font-inconsolata mb-8 inline-flex items-center gap-2 text-sm transition-opacity hover:opacity-80"
         style={{ color: '#878EA1' }}
       >
-        <ArrowLeft size={16} />
+        <ArrowLeft size={16} aria-hidden="true" />
         {t.project.back}
       </Link>
 
@@ -108,7 +108,7 @@ export default function ProjectDetail({ slug }: ProjectDetailProps) {
           style={{ backgroundColor: '#3996DB', color: '#0D0E11' }}
         >
           {t.project.viewSite}
-          <ExternalLink size={16} />
+          <ExternalLink size={16} aria-hidden="true" />
         </a>
         {project.repo && (
           <a
@@ -119,7 +119,7 @@ export default function ProjectDetail({ slug }: ProjectDetailProps) {
             style={{ borderColor: '#3996DB', color: '#3996DB' }}
           >
             {t.project.viewRepo}
-            <Github size={16} />
+            <Github size={16} aria-hidden="true" />
           </a>
         )}
       </div>
@@ -139,7 +139,7 @@ export default function ProjectDetail({ slug }: ProjectDetailProps) {
               {t.projects[next.slug].title}
             </span>
           </span>
-          <ArrowRight size={20} style={{ color: '#3996DB' }} />
+          <ArrowRight size={20} style={{ color: '#3996DB' }} aria-hidden="true" />
         </Link>
       )}
     </Container>

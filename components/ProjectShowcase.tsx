@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, ChevronLeft, ChevronRight, ExternalLink, Github, Lock } from "lucide-react";
 
-import TechTag from "./TechTag";
+import TechMarquee from "./TechMarquee";
 import { projects } from "@/lib/data";
 import { useLanguage } from "@/lib/LanguageContext";
 
@@ -56,7 +56,7 @@ export default function ProjectShowcase() {
           return (
             <article
               key={project.slug}
-              className="grid w-full shrink-0 snap-center items-center gap-8 px-1 py-4 lg:grid-cols-[1.5fr_1fr] lg:gap-12"
+              className="grid w-full shrink-0 snap-center items-center gap-8 px-1 py-4 lg:grid-cols-[minmax(0,1.5fr)_minmax(0,1fr)] lg:gap-12"
             >
               {/* Print dentro de uma moldura de navegador */}
               <Link
@@ -102,12 +102,12 @@ export default function ProjectShowcase() {
               </Link>
 
               {/* Informações */}
-              <div>
+              <div className="min-w-0">
                 <span
                   className="font-inconsolata mb-4 inline-flex items-center gap-2 rounded-full border px-3 py-1 text-xs"
                   style={{ borderColor: '#292C34', color: isOpen ? '#3996DB' : '#C0C4CE' }}
                 >
-                  {isOpen ? <Github size={12} /> : <Lock size={12} />}
+                  {isOpen ? <Github size={12} aria-hidden="true" /> : <Lock size={12} aria-hidden="true" />}
                   {isOpen ? t.project.statusOpen : t.project.statusPrivate}
                 </span>
 
@@ -121,10 +121,8 @@ export default function ProjectShowcase() {
                   {text.description}
                 </p>
 
-                <div className="mt-5 flex flex-wrap gap-2">
-                  {project.techs.map((tech) => (
-                    <TechTag key={tech} label={tech} />
-                  ))}
+                <div className="mt-5">
+                  <TechMarquee techs={project.techs} />
                 </div>
 
                 <div className="mt-7 flex flex-wrap items-center gap-x-5 gap-y-3">
@@ -134,7 +132,7 @@ export default function ProjectShowcase() {
                     style={{ backgroundColor: '#3996DB', color: '#0D0E11' }}
                   >
                     {t.project.viewDetails}
-                    <ArrowRight size={16} />
+                    <ArrowRight size={16} aria-hidden="true" />
                   </Link>
                   <a
                     href={project.url}
@@ -144,7 +142,7 @@ export default function ProjectShowcase() {
                     style={{ color: '#E2E4E9' }}
                   >
                     {t.project.viewSite}
-                    <ExternalLink size={14} />
+                    <ExternalLink size={14} aria-hidden="true" />
                   </a>
                   {project.repo && (
                     <a
@@ -155,7 +153,7 @@ export default function ProjectShowcase() {
                       style={{ color: '#E2E4E9' }}
                     >
                       {t.project.viewRepo}
-                      <Github size={14} />
+                      <Github size={14} aria-hidden="true" />
                     </a>
                   )}
                 </div>
@@ -166,7 +164,7 @@ export default function ProjectShowcase() {
       </div>
 
       {/* Abas com o nome dos projetos e setas */}
-      <div className="mt-8 flex items-center justify-between gap-4 border-t pt-4" style={{ borderColor: '#292C34' }}>
+      <div className="mt-8 flex items-start justify-between gap-4 border-t pt-4" style={{ borderColor: '#292C34' }}>
         <div role="tablist" className="font-inconsolata flex flex-wrap gap-x-6 gap-y-2 text-sm">
           {projects.map((project, index) => (
             <button
@@ -175,7 +173,7 @@ export default function ProjectShowcase() {
               role="tab"
               aria-selected={index === current}
               onClick={() => goTo(index)}
-              className="relative pb-1 transition-colors hover:!text-[#E2E4E9]"
+              className="relative pb-1 pt-2 transition-colors hover:!text-[#E2E4E9]"
               style={{ color: index === current ? '#E2E4E9' : '#878EA1' }}
             >
               {t.projects[project.slug].title}
@@ -196,7 +194,7 @@ export default function ProjectShowcase() {
             className={arrow}
             style={{ borderColor: '#292C34' }}
           >
-            <ChevronLeft size={18} />
+            <ChevronLeft size={18} aria-hidden="true" />
           </button>
           <button
             type="button"
@@ -206,7 +204,7 @@ export default function ProjectShowcase() {
             className={arrow}
             style={{ borderColor: '#292C34' }}
           >
-            <ChevronRight size={18} />
+            <ChevronRight size={18} aria-hidden="true" />
           </button>
         </div>
       </div>
