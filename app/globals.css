@@ -9,26 +9,26 @@
 :root,
 [data-theme="portfolio"] {
   /* Background escuro */
-  --color-base-100: #16181D;
-  --color-base-200: #0D0E11;
-  --color-base-300: #292C34;
-  --color-base-content: #E2E4E9;
+  --color-base-100: #10131A;
+  --color-base-200: #0A0C11;
+  --color-base-300: #232833;
+  --color-base-content: #F2F4F8;
 
   /* Cores principais */
-  --color-primary: #3996DB;
+  --color-primary: #4DA3F0;
   --color-primary-content: #ffffff;
   
   --color-secondary: #BB72E9;
   --color-secondary-content: #ffffff;
   
-  --color-accent: #3996DB;
+  --color-accent: #4DA3F0;
   --color-accent-content: #ffffff;
   
-  --color-neutral: #292C34;
-  --color-neutral-content: #E2E4E9;
+  --color-neutral: #232833;
+  --color-neutral-content: #F2F4F8;
 
   /* Feedback */
-  --color-info: #3996DB;
+  --color-info: #4DA3F0;
   --color-info-content: #ffffff;
   
   --color-success: #82BC4F;
@@ -55,26 +55,23 @@
 
 html {
   scroll-behavior: smooth;
-  background-color: #0D0E11;
+  background-color: #0A0C11;
 }
 
 body {
-  font-family: var(--font-maven), sans-serif;
-  background-color: #0D0E11;
-  color: #E2E4E9;
+  font-family: var(--font-sans), sans-serif;
+  background-color: #0A0C11;
+  color: #F2F4F8;
 }
 
 /* Classes de fonte - usam as variáveis injetadas por next/font/google */
-.font-asap {
-  font-family: var(--font-asap), sans-serif;
+.font-asap,
+.font-maven {
+  font-family: var(--font-sans), sans-serif;
 }
 
 .font-inconsolata {
-  font-family: var(--font-inconsolata), monospace;
-}
-
-.font-maven {
-  font-family: var(--font-maven), sans-serif;
+  font-family: var(--font-mono), monospace;
 }
 
 /* ==========================================
@@ -82,35 +79,35 @@ body {
    ========================================== */
 
 .bg-base-100 {
-  background-color: #16181D !important;
+  background-color: #10131A !important;
 }
 
 .bg-base-200 {
-  background-color: #0D0E11 !important;
+  background-color: #0A0C11 !important;
 }
 
 .bg-base-300 {
-  background-color: #292C34 !important;
+  background-color: #232833 !important;
 }
 
 .text-base-content {
-  color: #E2E4E9 !important;
+  color: #F2F4F8 !important;
 }
 
 .text-base-content\/70 {
-  color: rgba(226, 228, 233, 0.7) !important;
+  color: rgba(242, 244, 248, 0.7) !important;
 }
 
 .text-base-content\/60 {
-  color: rgba(226, 228, 233, 0.6) !important;
+  color: rgba(242, 244, 248, 0.6) !important;
 }
 
 .text-base-content\/50 {
-  color: rgba(226, 228, 233, 0.5) !important;
+  color: rgba(242, 244, 248, 0.5) !important;
 }
 
 .text-primary {
-  color: #3996DB !important;
+  color: #4DA3F0 !important;
 }
 
 .text-secondary {
@@ -118,36 +115,36 @@ body {
 }
 
 .text-accent {
-  color: #3996DB !important;
+  color: #4DA3F0 !important;
 }
 
 .border-base-300 {
-  border-color: #292C34 !important;
+  border-color: #232833 !important;
 }
 
 .border-base-300\/40 {
-  border-color: rgba(41, 44, 52, 0.4) !important;
+  border-color: rgba(35, 40, 51, 0.4) !important;
 }
 
 /* Cards */
 .card {
-  background-color: #16181D;
-  border-color: #292C34;
+  background-color: #10131A;
+  border-color: #232833;
 }
 
 /* Buttons */
 .btn-ghost:hover {
-  background-color: rgba(41, 44, 52, 0.5);
+  background-color: rgba(35, 40, 51, 0.5);
 }
 
 .btn-outline {
-  border-color: #292C34;
+  border-color: #232833;
 }
 
 /* Badge */
 .badge-outline {
-  border-color: #292C34;
-  background-color: rgba(22, 24, 29, 0.7);
+  border-color: #232833;
+  background-color: rgba(16, 19, 26, 0.7);
 }
 
 /* ==========================================
@@ -156,7 +153,7 @@ body {
 
 /* Efeito de glow */
 .glow-subtle {
-  box-shadow: 0 0 20px rgba(57, 150, 219, 0.1);
+  box-shadow: 0 0 20px rgba(77, 163, 240, 0.1);
 }
 
 .glow-primary {
@@ -171,8 +168,8 @@ body {
 .overlay-dark {
   background: linear-gradient(
     to bottom,
-    rgba(13, 14, 17, 0.7) 0%,
-    rgba(13, 14, 17, 0.9) 100%
+    rgba(10, 12, 17, 0.7) 0%,
+    rgba(10, 12, 17, 0.9) 100%
   );
 }
 
@@ -267,6 +264,6 @@ body {
 
 /* Foco visível para navegação por teclado */
 :focus-visible {
-  outline: 2px solid #3996db;
+  outline: 2px solid #4DA3F0;
   outline-offset: 2px;
 }

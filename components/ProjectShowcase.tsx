@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, ChevronLeft, ChevronRight, ExternalLink, Github, Lock } from "lucide-react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 import TechMarquee from "./TechMarquee";
 import { projects } from "@/lib/data";
@@ -37,7 +37,7 @@ export default function ProjectShowcase() {
   };
 
   const arrow =
-    "rounded-full border p-2 transition-all hover:border-[#3996DB] hover:text-[#3996DB] disabled:opacity-30 disabled:hover:border-[#292C34] disabled:hover:text-[#878EA1]";
+    "rounded-full border p-3 transition-all hover:border-[#4DA3F0] hover:text-[#4DA3F0] disabled:opacity-30 disabled:hover:border-[#232833] disabled:hover:text-[#8B93A7]";
 
   return (
     <div>
@@ -56,7 +56,7 @@ export default function ProjectShowcase() {
           return (
             <article
               key={project.slug}
-              className="grid w-full shrink-0 snap-center items-center gap-8 px-1 py-4 lg:grid-cols-[minmax(0,1.5fr)_minmax(0,1fr)] lg:gap-12"
+              className="grid w-full shrink-0 snap-center items-center gap-10 px-1 py-4 lg:grid-cols-[minmax(0,1.5fr)_minmax(0,1fr)] lg:gap-14"
             >
               {/* Print dentro de uma moldura de navegador */}
               <Link
@@ -66,26 +66,23 @@ export default function ProjectShowcase() {
               >
                 <div
                   aria-hidden="true"
-                  className="absolute -inset-4 -z-10 rounded-[2rem] opacity-60 blur-3xl transition-opacity duration-500 group-hover:opacity-100"
-                  style={{ background: 'radial-gradient(circle at 30% 20%, rgba(57,150,219,0.28), transparent 65%)' }}
+                  className="absolute -inset-5 -z-10 opacity-60 blur-3xl transition-opacity duration-500 group-hover:opacity-100"
+                  style={{ background: 'radial-gradient(ellipse at 30% 20%, rgba(77,163,240,0.25), transparent 65%)' }}
                 />
                 <div
-                  className="overflow-hidden rounded-xl border transition-transform duration-500 group-hover:-translate-y-1"
-                  style={{ backgroundColor: '#16181D', borderColor: '#292C34' }}
+                  className="overflow-hidden rounded-2xl border transition-all duration-500 group-hover:-translate-y-1 group-hover:!border-[#4DA3F0]"
+                  style={{ backgroundColor: '#10131A', borderColor: '#232833' }}
                 >
                   <div
                     className="flex items-center gap-3 border-b px-4 py-2.5"
-                    style={{ backgroundColor: '#1B1E24', borderColor: '#292C34' }}
+                    style={{ backgroundColor: '#141821', borderColor: '#232833' }}
                   >
                     <span className="flex gap-1.5" aria-hidden="true">
-                      <i className="h-2.5 w-2.5 rounded-full" style={{ backgroundColor: '#3A3F4B' }} />
-                      <i className="h-2.5 w-2.5 rounded-full" style={{ backgroundColor: '#3A3F4B' }} />
-                      <i className="h-2.5 w-2.5 rounded-full" style={{ backgroundColor: '#3A3F4B' }} />
+                      <i className="h-2.5 w-2.5 rounded-full" style={{ backgroundColor: '#2A3040' }} />
+                      <i className="h-2.5 w-2.5 rounded-full" style={{ backgroundColor: '#2A3040' }} />
+                      <i className="h-2.5 w-2.5 rounded-full" style={{ backgroundColor: '#2A3040' }} />
                     </span>
-                    <span
-                      className="font-inconsolata min-w-0 flex-1 truncate rounded-md px-3 py-1 text-xs"
-                      style={{ backgroundColor: '#0D0E11', color: '#878EA1' }}
-                    >
+                    <span className="font-inconsolata truncate text-xs" style={{ color: '#8B93A7' }}>
                       {host}
                     </span>
                   </div>
@@ -94,7 +91,7 @@ export default function ProjectShowcase() {
                       src={project.cover}
                       alt={text.title}
                       fill
-                      sizes="(min-width: 1024px) 560px, 100vw"
+                      sizes="(min-width: 1024px) 640px, 100vw"
                       className="object-cover object-top"
                     />
                   </div>
@@ -103,21 +100,26 @@ export default function ProjectShowcase() {
 
               {/* Informações */}
               <div className="min-w-0">
-                <span
-                  className="font-inconsolata mb-4 inline-flex items-center gap-2 rounded-full border px-3 py-1 text-xs"
-                  style={{ borderColor: '#292C34', color: isOpen ? '#3996DB' : '#C0C4CE' }}
-                >
-                  {isOpen ? <Github size={12} aria-hidden="true" /> : <Lock size={12} aria-hidden="true" />}
+                <p className="mb-4 flex items-center gap-2.5 text-sm" style={{ color: '#8B93A7' }}>
+                  <span
+                    aria-hidden="true"
+                    className="inline-block h-2 w-2 rounded-full"
+                    style={
+                      isOpen
+                        ? { backgroundColor: '#4DA3F0' }
+                        : { border: '1.5px solid #8B93A7' }
+                    }
+                  />
                   {isOpen ? t.project.statusOpen : t.project.statusPrivate}
-                </span>
+                </p>
 
-                <h3 className="font-asap text-3xl font-bold sm:text-4xl" style={{ color: '#E2E4E9' }}>
+                <h3 className="font-asap text-4xl font-extrabold leading-tight tracking-tight sm:text-5xl" style={{ color: '#F2F4F8' }}>
                   {text.title}
                 </h3>
-                <p className="font-inconsolata mt-2 text-base" style={{ color: '#3996DB' }}>
+                <p className="font-inconsolata mt-3 text-sm" style={{ color: '#4DA3F0' }}>
                   {text.tagline}
                 </p>
-                <p className="font-maven mt-4 line-clamp-4 text-sm leading-relaxed" style={{ color: '#878EA1' }}>
+                <p className="font-maven mt-4 text-base leading-relaxed sm:text-[17px]" style={{ color: '#8B93A7' }}>
                   {text.description}
                 </p>
 
@@ -125,37 +127,34 @@ export default function ProjectShowcase() {
                   <TechMarquee techs={project.techs} />
                 </div>
 
-                <div className="mt-7 flex flex-wrap items-center gap-x-5 gap-y-3">
-                  <Link
-                    href={`/projetos/${project.slug}`}
-                    className="inline-flex items-center gap-2 rounded-lg px-5 py-2.5 text-sm font-semibold transition-opacity hover:opacity-90"
-                    style={{ backgroundColor: '#3996DB', color: '#0D0E11' }}
-                  >
-                    {t.project.viewDetails}
-                    <ArrowRight size={16} aria-hidden="true" />
-                  </Link>
+                <div className="mt-7 flex flex-wrap items-center gap-x-7 gap-y-3 text-[15px] font-semibold">
                   <a
                     href={project.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-sm font-medium transition-opacity hover:opacity-80"
-                    style={{ color: '#E2E4E9' }}
+                    className="rounded-lg px-5 py-3 transition-opacity hover:opacity-90"
+                    style={{ backgroundColor: '#4DA3F0', color: '#06121F' }}
                   >
                     {t.project.viewSite}
-                    <ExternalLink size={14} aria-hidden="true" />
                   </a>
                   {project.repo && (
                     <a
                       href={project.repo}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 text-sm font-medium transition-opacity hover:opacity-80"
-                      style={{ color: '#E2E4E9' }}
+                      className="border-b pb-0.5 transition-colors hover:!border-[#4DA3F0] hover:!text-[#4DA3F0]"
+                      style={{ color: '#F2F4F8', borderColor: '#2A3040' }}
                     >
                       {t.project.viewRepo}
-                      <Github size={14} aria-hidden="true" />
                     </a>
                   )}
+                  <Link
+                    href={`/projetos/${project.slug}`}
+                    className="border-b pb-0.5 transition-colors hover:!border-[#4DA3F0] hover:!text-[#4DA3F0]"
+                    style={{ color: '#F2F4F8', borderColor: '#2A3040' }}
+                  >
+                    {t.project.viewDetails}
+                  </Link>
                 </div>
               </div>
             </article>
@@ -164,37 +163,34 @@ export default function ProjectShowcase() {
       </div>
 
       {/* Abas com o nome dos projetos e setas */}
-      <div className="mt-8 flex items-start justify-between gap-4 border-t pt-4" style={{ borderColor: '#292C34' }}>
-        <div role="tablist" className="font-inconsolata flex flex-wrap gap-x-6 gap-y-2 text-sm">
+      <div className="mt-12 flex flex-wrap items-center justify-between gap-4 border-t pt-4" style={{ borderColor: '#1B2029' }}>
+        <div role="group" className="flex flex-wrap gap-x-7 gap-y-1">
           {projects.map((project, index) => (
             <button
               key={project.slug}
               type="button"
-              role="tab"
-              aria-selected={index === current}
               onClick={() => goTo(index)}
-              className="relative pb-1 pt-2 transition-colors hover:!text-[#E2E4E9]"
-              style={{ color: index === current ? '#E2E4E9' : '#878EA1' }}
+              aria-pressed={index === current}
+              className="border-b-2 py-2.5 text-[15px] transition-colors hover:!text-[#F2F4F8]"
+              style={{
+                color: index === current ? '#F2F4F8' : '#8B93A7',
+                borderColor: index === current ? '#4DA3F0' : 'transparent',
+              }}
             >
               {t.projects[project.slug].title}
-              <span
-                aria-hidden="true"
-                className="absolute -top-[17px] left-0 h-0.5 transition-all duration-300"
-                style={{ width: index === current ? '100%' : '0%', backgroundColor: '#3996DB' }}
-              />
             </button>
           ))}
         </div>
-        <div className="flex shrink-0 gap-2" style={{ color: '#878EA1' }}>
+        <div className="flex gap-2.5" style={{ color: '#8B93A7' }}>
           <button
             type="button"
             onClick={() => goTo(current - 1)}
             disabled={current === 0}
             aria-label={t.project.previousProject}
             className={arrow}
-            style={{ borderColor: '#292C34' }}
+            style={{ borderColor: '#232833' }}
           >
-            <ChevronLeft size={18} aria-hidden="true" />
+            <ChevronLeft size={18} />
           </button>
           <button
             type="button"
@@ -202,9 +198,9 @@ export default function ProjectShowcase() {
             disabled={current === projects.length - 1}
             aria-label={t.project.nextProjectArrow}
             className={arrow}
-            style={{ borderColor: '#292C34' }}
+            style={{ borderColor: '#232833' }}
           >
-            <ChevronRight size={18} aria-hidden="true" />
+            <ChevronRight size={18} />
           </button>
         </div>
       </div>

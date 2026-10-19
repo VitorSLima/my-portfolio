@@ -21,9 +21,9 @@ type LightboxProps = {
 };
 
 const buttonStyle = {
-  backgroundColor: 'rgba(13, 14, 17, 0.8)',
-  borderColor: '#292C34',
-  color: '#E2E4E9',
+  backgroundColor: 'rgba(10, 12, 17, 0.8)',
+  borderColor: '#232833',
+  color: '#F2F4F8',
 };
 
 export default function Lightbox({
@@ -87,7 +87,7 @@ export default function Lightbox({
               className="object-contain"
             />
           </div>
-          <p className="font-maven text-center text-sm" style={{ color: '#C0C4CE' }}>
+          <p className="font-maven text-center text-sm" style={{ color: '#B7BDCC' }}>
             {slide.alt}
           </p>
 

@@ -25,6 +25,10 @@ export const translations = {
       title: "Engenheiro de Software",
       scrollLabel: "Rolar para os projetos",
       available: "Disponível para novos projetos",
+      summary:
+        "Back-end e front-end, com especialização em APIs RESTful. Otimizo sistemas, integro serviços e entrego soluções que geram resultado.",
+      viewProjects: "Ver projetos",
+      card: { focusKey: "foco", focus: "APIs RESTful", stackKey: "stack", projectsKey: "projetos", location: "Três Lagoas, MS" },
       description:
         "Sou de Três Lagoas, MS, com experiência em back-end e front-end e especialização em APIs RESTful. Já atuei com otimização de sistemas, integração de serviços e melhoria contínua, sempre focado em entregar soluções de qualidade que gerem resultados. Também fui professor de desenvolvimento web e hoje oriento agentes de IA no meu fluxo de trabalho.",
     },
@@ -37,6 +41,7 @@ export const translations = {
     experience: {
       label: "Experiência",
       title: "Experiência em números",
+      bars: { before: "Antes", after: "Depois" },
       stats: [
         { value: "3+", title: "anos de experiência", label: "Trabalhando com desenvolvimento web profissionalmente desde 05/2023." },
         { value: "−70%", title: "menos custo de infraestrutura", label: "Reduzi o gasto mensal do ambiente de testes de US$ 66 para US$ 19 ao achar a causa: logs acumulados sem limpeza." },
@@ -51,7 +56,7 @@ export const translations = {
         {
           title: "Websites e Aplicativos",
           description:
-            "Interfaces web com React e Next.js, como as do BeautyDesk e do Comandei.",
+            "Interfaces web com React e Next.js, como as do BeautyDesk, do Comandei e da Torcida Veste.",
         },
         {
           title: "API e banco de dados",
@@ -68,8 +73,13 @@ export const translations = {
     // Contact
     contact: {
       label: "Contato",
-      title: "Gostou do meu trabalho?",
+      title: "Gostou do meu trabalho? Vamos conversar",
       description: "Entre em contato ou acompanhe as minhas redes sociais!",
+    },
+    // Rodapé
+    footer: {
+      backToTop: "Voltar ao topo",
+      rights: "Vitor dos Santos Lima",
     },
     // Currículo
     cv: {
@@ -77,9 +87,9 @@ export const translations = {
     },
     // Rótulos da página e do card de projeto
     project: {
-      viewSite: "Ver site",
+      viewSite: "Visitar site",
       viewRepo: "Ver código",
-      viewDetails: "Ver detalhes",
+      viewDetails: "Detalhes",
       statusOpen: "Projeto pessoal · código aberto",
       statusPrivate: "Produto SaaS · código privado",
       previousProject: "Projeto anterior",
@@ -200,6 +210,10 @@ export const translations = {
       title: "Software Engineer",
       scrollLabel: "Scroll to projects",
       available: "Available for new projects",
+      summary:
+        "Back-end and front-end, specialized in RESTful APIs. I optimize systems, integrate services and deliver solutions that produce results.",
+      viewProjects: "View projects",
+      card: { focusKey: "focus", focus: "RESTful APIs", stackKey: "stack", projectsKey: "projects", location: "Três Lagoas, Brazil" },
       description:
         "I'm from Três Lagoas, Brazil, with experience in back-end and front-end development and a specialty in RESTful APIs. I have worked on system optimization, service integration and continuous improvement, always focused on delivering quality solutions that produce results. I was also a web development teacher, and today I direct AI agents in my workflow.",
     },
@@ -212,6 +226,7 @@ export const translations = {
     experience: {
       label: "Experience",
       title: "Experience in numbers",
+      bars: { before: "Before", after: "After" },
       stats: [
         { value: "3+", title: "years of experience", label: "Working with web development professionally since 05/2023." },
         { value: "−70%", title: "lower infrastructure cost", label: "Cut the monthly cost of the testing environment from US$ 66 to US$ 19 by finding the cause: logs piling up with no cleanup." },
@@ -226,7 +241,7 @@ export const translations = {
         {
           title: "Websites & Apps",
           description:
-            "Web interfaces with React and Next.js, like those of BeautyDesk and Comandei.",
+            "Web interfaces with React and Next.js, like those of BeautyDesk, Comandei and Torcida Veste.",
         },
         {
           title: "API & Database",
@@ -243,8 +258,13 @@ export const translations = {
     // Contact
     contact: {
       label: "Contact",
-      title: "Liked my work?",
+      title: "Liked my work? Let's talk",
       description: "Get in touch or follow my social media!",
+    },
+    // Footer
+    footer: {
+      backToTop: "Back to top",
+      rights: "Vitor dos Santos Lima",
     },
     // Resume
     cv: {
@@ -252,9 +272,9 @@ export const translations = {
     },
     // Project page and card labels
     project: {
-      viewSite: "View site",
+      viewSite: "Visit site",
       viewRepo: "View code",
-      viewDetails: "View details",
+      viewDetails: "Details",
       statusOpen: "Personal project · open source",
       statusPrivate: "SaaS product · private code",
       previousProject: "Previous project",
@@ -382,6 +402,9 @@ export type Translations = {
     title: string;
     scrollLabel: string;
     available: string;
+    summary: string;
+    viewProjects: string;
+    card: { focusKey: string; focus: string; stackKey: string; projectsKey: string; location: string };
     description: string;
   };
   work: {
@@ -391,7 +414,12 @@ export type Translations = {
   experience: {
     label: string;
     title: string;
+    bars: { before: string; after: string };
     stats: Array<{ value: string; title: string; label: string }>;
+  };
+  footer: {
+    backToTop: string;
+    rights: string;
   };
   services: {
     label: string;

@@ -1,29 +1,21 @@
 import type { Metadata } from "next";
-import { Asap, Inconsolata, Maven_Pro } from "next/font/google";
+import { JetBrains_Mono, Schibsted_Grotesk } from "next/font/google";
 import { LanguageProvider } from "@/lib/LanguageContext";
 import "./globals.css";
 
-// Fonte para títulos
-const asap = Asap({
+// Fonte para títulos e texto
+const schibsted = Schibsted_Grotesk({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  variable: "--font-asap",
+  weight: ["400", "500", "600", "700", "800"],
+  variable: "--font-sans",
   display: "swap",
 });
 
-// Fonte para subtítulos e código
-const inconsolata = Inconsolata({
+// Fonte para detalhes técnicos (rótulos, código, etiquetas)
+const jetbrains = JetBrains_Mono({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  variable: "--font-inconsolata",
-  display: "swap",
-});
-
-// Fonte para texto
-const mavenPro = Maven_Pro({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  variable: "--font-maven",
+  weight: ["400", "500"],
+  variable: "--font-mono",
   display: "swap",
 });
 
@@ -71,10 +63,10 @@ export default function RootLayout({
     <html
       lang="en"
       data-theme="portfolio"
-      className={`${asap.variable} ${inconsolata.variable} ${mavenPro.variable}`}
+      className={`${schibsted.variable} ${jetbrains.variable}`}
       suppressHydrationWarning
     >
-      <body className="antialiased" style={{ backgroundColor: '#0D0E11', color: '#E2E4E9' }}>
+      <body className="antialiased" style={{ backgroundColor: '#0A0C11', color: '#F2F4F8' }}>
         <LanguageProvider>
           {children}
         </LanguageProvider>

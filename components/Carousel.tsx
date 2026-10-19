@@ -63,7 +63,7 @@ export default function Carousel({
           onScroll={handleScroll}
           tabIndex={0}
           className="flex snap-x snap-mandatory overflow-x-auto rounded-2xl border [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
-          style={{ backgroundColor: '#16181D', borderColor: '#292C34' }}
+          style={{ backgroundColor: '#10131A', borderColor: '#232833' }}
         >
           {slides.map((slide, index) => (
             <div key={slide.src} className="relative aspect-[16/10] w-full shrink-0 snap-center">
@@ -84,7 +84,7 @@ export default function Carousel({
                 <span
                   aria-hidden="true"
                   className="pointer-events-none absolute right-3 top-3 rounded-full border p-2 opacity-70 transition-opacity group-hover:opacity-100"
-                  style={{ backgroundColor: 'rgba(13, 14, 17, 0.8)', borderColor: '#292C34', color: '#E2E4E9' }}
+                  style={{ backgroundColor: 'rgba(10, 12, 17, 0.8)', borderColor: '#232833', color: '#F2F4F8' }}
                 >
                   <Maximize2 size={16} />
                 </span>
@@ -100,7 +100,7 @@ export default function Carousel({
           disabled={isFirst}
           aria-label={previousLabel}
           className="absolute left-3 top-1/2 -translate-y-1/2 rounded-full border p-2 transition-opacity hover:opacity-80 disabled:opacity-30"
-          style={{ backgroundColor: 'rgba(13, 14, 17, 0.8)', borderColor: '#292C34', color: '#E2E4E9' }}
+          style={{ backgroundColor: 'rgba(10, 12, 17, 0.8)', borderColor: '#232833', color: '#F2F4F8' }}
         >
           <ChevronLeft size={20} />
         </button>
@@ -110,14 +110,14 @@ export default function Carousel({
           disabled={isLast}
           aria-label={nextLabel}
           className="absolute right-3 top-1/2 -translate-y-1/2 rounded-full border p-2 transition-opacity hover:opacity-80 disabled:opacity-30"
-          style={{ backgroundColor: 'rgba(13, 14, 17, 0.8)', borderColor: '#292C34', color: '#E2E4E9' }}
+          style={{ backgroundColor: 'rgba(10, 12, 17, 0.8)', borderColor: '#232833', color: '#F2F4F8' }}
         >
           <ChevronRight size={20} />
         </button>
       </div>
 
       {/* Legenda do slide atual */}
-      <p className="font-maven mt-4 text-center text-sm" style={{ color: '#C0C4CE' }}>
+      <p className="font-maven mt-4 text-center text-sm" style={{ color: '#B7BDCC' }}>
         {slides[current]?.alt}
       </p>
 
@@ -131,7 +131,7 @@ export default function Carousel({
             aria-label={`${index + 1} / ${slides.length}`}
             aria-current={index === current}
             className="h-2 w-2 rounded-full transition-colors"
-            style={{ backgroundColor: index === current ? '#3996DB' : '#292C34' }}
+            style={{ backgroundColor: index === current ? '#4DA3F0' : '#232833' }}
           />
         ))}
       </div>

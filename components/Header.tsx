@@ -12,7 +12,6 @@ export default function Header() {
   const [active, setActive] = useState("home");
 
   const links = [
-    { label: t.nav.home, href: "/#home" },
     { label: t.nav.work, href: "/#work" },
     { label: t.nav.experience, href: "/#experience" },
     { label: t.nav.services, href: "/#services" },
@@ -39,34 +38,34 @@ export default function Header() {
   }, [pathname]);
 
   return (
-    <header 
-      className="fixed top-0 z-50 w-full border-b backdrop-blur-sm"
-      style={{ 
-        backgroundColor: 'rgba(13, 14, 17, 0.8)',
-        borderColor: 'rgba(41, 44, 52, 0.5)'
-      }}
+    <header
+      className="fixed top-0 z-50 w-full backdrop-blur-md"
+      style={{ backgroundColor: 'rgba(10, 12, 17, 0.75)' }}
     >
-      <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-3 py-3 sm:px-6">
-        {/* Spacer for balance */}
-        <div className="hidden w-16 sm:block" />
-        {/* Centered navigation */}
-        <nav className="flex items-center sm:gap-2">
+      <div className="mx-auto flex w-full max-w-6xl items-center justify-between gap-3 px-6 py-4">
+        <Link
+          href="/#home"
+          className="font-asap hidden text-base font-bold tracking-tight sm:block"
+          style={{ color: '#F2F4F8' }}
+        >
+          Vitor Lima
+        </Link>
+        <nav className="flex items-center gap-1 sm:gap-4">
           {links.map((link) => {
             const isActive = pathname === "/" && link.href === `/#${active}`;
             return (
-            <Link
-              key={link.href}
-              href={link.href}
-              aria-current={isActive ? "location" : undefined}
-              className="rounded-lg px-1.5 py-2 text-xs transition-colors hover:bg-white/5 sm:px-3 sm:text-sm"
-              style={{ color: isActive ? '#3996DB' : '#C0C4CE' }}
-            >
-              {link.label}
-            </Link>
+              <Link
+                key={link.href}
+                href={link.href}
+                aria-current={isActive ? "location" : undefined}
+                className="rounded-lg px-2 py-2 text-xs transition-colors hover:!text-[#F2F4F8] sm:px-3 sm:text-sm"
+                style={{ color: isActive ? '#4DA3F0' : '#8B93A7' }}
+              >
+                {link.label}
+              </Link>
             );
           })}
         </nav>
-        {/* Language switcher */}
         <LanguageSwitcher />
       </div>
     </header>

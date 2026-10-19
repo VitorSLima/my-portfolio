@@ -1,8 +1,6 @@
 export { default as Container } from "./Container";
 export { default as Section } from "./Section";
 export { default as ProjectShowcase } from "./ProjectShowcase";
-export { default as ServiceCard } from "./ServiceCard";
-export { default as SocialButton } from "./SocialButton";
 export { default as Header } from "./Header";
 export { default as TechTag } from "./TechTag";
 export { default as Carousel } from "./Carousel";
@@ -11,3 +9,5 @@ export { default as TechMarquee } from "./TechMarquee";
 export { default as StatCard } from "./StatCard";
 export { default as Lightbox } from "./Lightbox";
 export { default as Reveal } from "./Reveal";
+export { default as ApiCard } from "./ApiCard";
+export { default as Footer } from "./Footer";

@@ -18,9 +18,9 @@ export default function TechTag({ label, size = "sm" }: TechTagProps) {
           : "gap-1.5 rounded-md px-2 py-0.5 text-xs"
       }`}
       style={{
-        borderColor: isLarge ? '#3A3F4B' : '#292C34',
-        backgroundColor: isLarge ? '#16181D' : undefined,
-        color: isLarge ? '#E2E4E9' : '#C0C4CE',
+        borderColor: isLarge ? '#3A3F4B' : '#232833',
+        backgroundColor: isLarge ? '#10131A' : undefined,
+        color: isLarge ? '#F2F4F8' : '#B7BDCC',
       }}
     >
       {icon && (

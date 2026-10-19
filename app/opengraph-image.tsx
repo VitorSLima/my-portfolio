@@ -9,10 +9,10 @@ export const contentType = "image/png";
 // Linhas coloridas decorativas, no mesmo estilo do fundo do site
 const bars = [
   { top: 70, left: -40, width: 300, color: "#82BC4F" },
-  { top: 120, left: 40, width: 180, color: "#3996DB" },
+  { top: 120, left: 40, width: 180, color: "#4DA3F0" },
   { top: 520, left: -60, width: 340, color: "#BB72E9" },
   { top: 570, left: 20, width: 200, color: "#EABD5F" },
-  { top: 90, left: 960, width: 320, color: "#3996DB" },
+  { top: 90, left: 960, width: 320, color: "#4DA3F0" },
   { top: 140, left: 1040, width: 200, color: "#E74C3C" },
   { top: 500, left: 940, width: 340, color: "#82BC4F" },
   { top: 550, left: 1020, width: 220, color: "#BB72E9" },
@@ -32,8 +32,8 @@ export default async function OpengraphImage() {
           alignItems: "center",
           justifyContent: "center",
           position: "relative",
-          background: "#0D0E11",
-          color: "#E2E4E9",
+          background: "#0A0C11",
+          color: "#F2F4F8",
           fontFamily: "sans-serif",
         }}
       >
@@ -63,12 +63,12 @@ export default async function OpengraphImage() {
               width: 260,
               height: 260,
               borderRadius: 130,
-              border: "4px solid #292C34",
+              border: "4px solid #232833",
               objectFit: "cover",
             }}
           />
           <div style={{ display: "flex", flexDirection: "column" }}>
-            <div style={{ display: "flex", fontSize: 30, color: "#3996DB" }}>
+            <div style={{ display: "flex", fontSize: 30, color: "#4DA3F0" }}>
               Vitor dos Santos Lima
             </div>
             <div
@@ -86,7 +86,7 @@ export default async function OpengraphImage() {
               style={{
                 display: "flex",
                 fontSize: 30,
-                color: "#878EA1",
+                color: "#8B93A7",
                 marginTop: 24,
               }}
             >
