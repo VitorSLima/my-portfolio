@@ -12,7 +12,7 @@ This portfolio serves as my professional showcase, highlighting personal project
 - **Language:** TypeScript
 - **Styling:** TailwindCSS 4 + DaisyUI 5
 - **Icons:** Lucide React
-- **Fonts:** Google Fonts (Asap, Inconsolata, Maven Pro)
+- **Fonts:** Google Fonts (Schibsted Grotesk, JetBrains Mono)
 
 ## Features
 
@@ -42,6 +42,9 @@ npm install
 # Run development server
 npm run dev
 
+# Run type check
+npm run typecheck
+
 # Build for production
 npm run build
 ```
@@ -70,7 +73,7 @@ Este portfólio serve como minha vitrine profissional, destacando projetos pesso
 - **Linguagem:** TypeScript
 - **Estilização:** TailwindCSS 4 + DaisyUI 5
 - **Ícones:** Lucide React
-- **Fontes:** Google Fonts (Asap, Inconsolata, Maven Pro)
+- **Fontes:** Google Fonts (Schibsted Grotesk, JetBrains Mono)
 
 ## Funcionalidades
 
@@ -99,6 +102,9 @@ npm install
 
 # Executar servidor de desenvolvimento
 npm run dev
+
+# Checagem de tipos
+npm run typecheck
 
 # Build para produção
 npm run build
