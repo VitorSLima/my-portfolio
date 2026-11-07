@@ -58,6 +58,12 @@ html {
   background-color: #0A0C11;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
 body {
   font-family: var(--font-sans), sans-serif;
   background-color: #0A0C11;
