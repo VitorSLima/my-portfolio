@@ -42,6 +42,13 @@ export default function Header() {
       className="fixed top-0 z-50 w-full backdrop-blur-md"
       style={{ backgroundColor: 'rgba(10, 12, 17, 0.75)' }}
     >
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-lg focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:outline-none focus:ring-2 focus:ring-[#4DA3F0]"
+        style={{ backgroundColor: '#141821', color: '#F2F4F8' }}
+      >
+        {t.nav.skipToContent}
+      </a>
       <div className="mx-auto flex w-full max-w-6xl items-center justify-between gap-3 px-6 py-4">
         <Link
           href="/#home"

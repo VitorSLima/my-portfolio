@@ -46,7 +46,10 @@ export default function ProjectShowcase() {
         ref={trackRef}
         onScroll={update}
         tabIndex={0}
-        className="flex snap-x snap-mandatory overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+        role="region"
+        aria-label={t.work.title}
+        aria-roledescription="carousel"
+        className="flex snap-x snap-mandatory overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden focus:outline-none focus-visible:ring-1 focus-visible:ring-[#4DA3F0]"
       >
         {projects.map((project) => {
           const text = t.projects[project.slug];

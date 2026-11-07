@@ -40,7 +40,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
   return (
     <div className="relative min-h-screen" style={{ backgroundColor: '#0A0C11' }}>
       <Header />
-      <main className="pb-20 pt-28">
+      <main id="main-content" className="pb-20 pt-28">
         <ProjectDetail slug={project.slug} />
       </main>
     </div>

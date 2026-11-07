@@ -6,6 +6,7 @@ export const translations = {
   pt: {
     // Header
     nav: {
+      skipToContent: "Pular para o conteúdo",
       home: "Home",
       work: "Trabalho",
       experience: "Experiência",
@@ -191,6 +192,7 @@ export const translations = {
   en: {
     // Header
     nav: {
+      skipToContent: "Skip to content",
       home: "Home",
       work: "Work",
       experience: "Experience",
@@ -386,6 +388,7 @@ export type ProjectText = {
 
 export type Translations = {
   nav: {
+    skipToContent: string;
     home: string;
     work: string;
     experience: string;

@@ -42,7 +42,7 @@ export default function Home() {
     <div className="relative min-h-screen" style={{ backgroundColor: '#0A0C11' }}>
       <Header />
 
-      <main>
+      <main id="main-content">
         {/* ==========================================
             HERO
             ========================================== */}
