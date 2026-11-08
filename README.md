@@ -20,8 +20,10 @@ This portfolio serves as my professional showcase, highlighting personal project
 - Dark theme with modern UI/UX
 - Bilingual support (English/Portuguese) with accessible language switcher
 - Interactive project showcase with tabbed carousel and preview frames
-- Accessible UI components with semantic markup and ARIA enhancements
-- Smooth scroll navigation
+- Accessible UI components with semantic markup, ARIA enhancements, and skip-to-content navigation
+- SEO-ready architecture with dynamic `sitemap.ts`, `robots.ts`, OpenGraph and JSON-LD structured data
+- Progressive Web App (PWA) manifest and themed viewport metadata
+- Smooth scroll navigation with reduced-motion preferences support
 - Optimized images with Next.js Image component
 - Clean component architecture
 
@@ -81,8 +83,10 @@ Este portfólio serve como minha vitrine profissional, destacando projetos pesso
 - Tema escuro com UI/UX moderna
 - Suporte bilíngue (Inglês/Português) com seletor de idioma acessível
 - Vitrine interativa de projetos com carrossel em abas e molduras de preview
-- Componentes acessíveis com marcação semântica e aprimoramentos ARIA
-- Navegação com scroll suave
+- Componentes acessíveis com marcação semântica, aprimoramentos ARIA e link para pular para o conteúdo
+- Arquitetura preparada para SEO com `sitemap.ts`, `robots.ts`, OpenGraph dinâmico e dados estruturados JSON-LD
+- Manifesto para Progressive Web App (PWA) e metadados de viewport temáticos
+- Navegação com scroll suave respeitando preferências de movimento reduzido
 - Imagens otimizadas com componente Next.js Image
 - Arquitetura de componentes limpa
 
