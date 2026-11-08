@@ -59,6 +59,45 @@ export const metadata: Metadata = {
   },
 };
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": `${siteUrl}/#person`,
+      name: "Vitor Lima",
+      jobTitle: "Software Engineer",
+      email: "mailto:dev.vitorlima@gmail.com",
+      url: siteUrl,
+      sameAs: [
+        "https://www.linkedin.com/in/vitors-lima/",
+        "https://github.com/VitorSLima",
+      ],
+      knowsAbout: [
+        "TypeScript",
+        "React",
+        "Next.js",
+        "Node.js",
+        "REST APIs",
+        "NestJS",
+        "PostgreSQL",
+        "Docker",
+      ],
+    },
+    {
+      "@type": "WebSite",
+      "@id": `${siteUrl}/#website`,
+      url: siteUrl,
+      name: "Vitor Lima | Software Engineer Portfolio",
+      description:
+        "Portfólio de Vitor Lima - Engenheiro de Software especializado em APIs RESTful e desenvolvimento fullstack.",
+      publisher: {
+        "@id": `${siteUrl}/#person`,
+      },
+    },
+  ],
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -72,6 +111,10 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <body className="antialiased" style={{ backgroundColor: '#0A0C11', color: '#F2F4F8' }}>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         <LanguageProvider>
           {children}
         </LanguageProvider>
