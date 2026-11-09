@@ -28,6 +28,9 @@ export async function generateMetadata({ params }: ProjectPageProps): Promise<Me
   return {
     title: `${text.title} | Vitor Lima`,
     description: text.description,
+    alternates: {
+      canonical: `/projetos/${slug}`,
+    },
   };
 }
 

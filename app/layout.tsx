@@ -39,11 +39,28 @@ export const metadata: Metadata = {
     "software engineer",
     "fullstack",
     "react",
+    "next.js",
     "node.js",
     "typescript",
+    "nestjs",
+    "restful apis",
     "portfolio",
   ],
   authors: [{ name: "Vitor Lima" }],
+  alternates: {
+    canonical: "/",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   openGraph: {
     title: "Vitor Lima | Engenheiro de Software",
     description:
